@@ -1,0 +1,534 @@
+/* buttons */
+.btn {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  text-align: center;
+  /* 줄내림 되지마라*/
+  white-space: nowrap;
+  cursor: pointer;
+  border-radius: var(--radius-md);
+}
+/* 비활성화일떄 */
+.btn:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.btn:focus-visible {
+  outline: 2px solid var(--primary);
+  /* 좀 더 명확하게 보임 visible이라 쓸때 같이씀 키보드 사요자에게 유용 */
+  outline-offset: 2px;
+}
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--background);
+}
+.btn-primary:hover {
+  opacity: 0.9;
+}
+.btn-secondary {
+  border: 1px solid var(--border);
+  background-color: var(--muted);
+  color: var(--foreground);
+}
+.btn-secondary:hover {
+  background-color: var(--border);
+}
+.btn-outline {
+  border: 1px solid var(--border);
+  background-color: var(--background);
+  color: var(--primary);
+}
+.btn-outline:hover {
+  border-color: var(--primary);
+  background-color: var(--muted);
+}
+.btn-ghost {
+  background-color: transparent;
+  color: var(--foreground);
+}
+.btn-ghost:hover {
+  background-color: var(--muted);
+}
+.btn-destructive {
+  background-color: var(--destructive);
+  color: var(--background);
+}
+.btn-destructive:hover {
+  opacity: 0.9;
+}
+.btn-sm {
+  min-height: 32px;
+  padding: 0.25rem 0.75rem;
+  font-size: var(--font-size-xs);
+}
+.btn-lg {
+  min-height: 48px;
+  padding: 0.75rem 1.5rem;
+  font-size: var(--font-size-base);
+}
+.btn-block {
+  width: 100%;
+  display: flex;
+}
+/* 아이콘이 있다면~ */
+.btn-icon {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+.btn-icon.btn-sm {
+  width: 32px;
+  height: 32px;
+}
+
+/* section header */
+section {
+  padding: var(--spacing-3xl) 0;
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-lg);
+}
+.section-header .section-title {
+}
+.section-link {
+  display: flex;
+  gap: var(--spacing-s);
+  align-items: baseline;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--muted-foreground);
+}
+
+.section-link:hover {
+  color: var(--primary);
+}
+
+/* course-card */
+.course-card {
+  /* a태그에 뭐시기 */
+  display: block;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  background-color: var(--card);
+  cursor: pointer;
+  border-radius: var(--radius-lg);
+}
+.course-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+.course-card-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.course-card-content {
+  padding: var(--spacing-md);
+}
+.course-card-title {
+  display: -webkit-box;
+  margin-bottom: var(--spacing-xs);
+  overflow: hidden;
+  font-weight: 600;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+.course-card-instructor {
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  color: var(--muted-foreground);
+}
+.course-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+}
+.course-card-rating {
+  display: flex;
+  gap: var(--spacing-xs);
+  align-items: center;
+  color: var(--foreground);
+}
+.star {
+  font-size: var(--font-size-xs);
+}
+.star.filled {
+  color: var(--warning);
+}
+.star.half {
+  color: var(--warning);
+  opacity: 0.8;
+}
+.course-card-students {
+  font-size: var(--font-size-xs);
+  color: var(--muted-foreground);
+}
+.course-card-price {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+/* cart-icon */
+.cart-icon-link {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--foreground);
+  border-radius: var(--radius-lg);
+}
+.cart-icon-link:hover {
+  background-color: var(--muted);
+}
+
+.cart-icon {
+  font-size: var(--font-size-xl);
+}
+.cart-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--destructive);
+  font-size: 12px;
+  color: #fff;
+  border-radius: var(--radius-full);
+}
+
+/* swiper container with side navigation */
+.swiper-container {
+  position: relative;
+}
+.swiper-nav-btn {
+  position: absolute;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-md);
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: var(--foreground);
+  cursor: pointer;
+  transform: translateY(-50%);
+  border-radius: var(--radius-full);
+}
+.swiper-nav-prev {
+  left: -22px;
+}
+.swiper-nav-next {
+  right: -22px;
+}
+
+/* courses swiper */
+.courses-swiper {
+  overflow: hidden;
+}
+
+.courses-swiper .swiper-slide {
+  height: auto;
+}
+.courses-swiper .course-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.courses-swiper .course-card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.courses-swiper .course-card-price {
+  margin-top: auto;
+}
+
+/* breadcrumb */
+.breadcrumb {
+  margin-bottom: var(--spacing-lg);
+}
+.breadcrumb-link {
+  display: inline-flex;
+  gap: var(--spacing-xs);
+  align-items: baseline;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--muted-foreground);
+}
+
+.breadcrumb-link:hover {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* course-detail */
+.course-detail-header {
+  display: flex;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
+}
+/* 1:1 비율 */
+.course-detail-thumbnail {
+  flex: 1;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+.course-detail-thumbnail img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.course-detail-info {
+  flex: 1;
+}
+.course-detail-info h1 {
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+}
+.course-instructor {
+  margin-bottom: var(--spacing-md);
+  color: var(--muted-foreground);
+}
+.course-meta {
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+.course-rating {
+  display: flex;
+  gap: var(--spacing-xs);
+  align-items: center;
+}
+.course-reviews {
+  font-size: var(--font-size-sm);
+  color: var(--muted-foreground);
+}
+.course-students {
+  font-size: var(--font-size-sm);
+  color: var(--muted-foreground);
+}
+.course-price {
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--foreground);
+}
+.course-actions {
+}
+
+.purchase-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-direction: column;
+}
+
+.course-detail-body {
+}
+.course-description {
+  margin-bottom: var(--spacing-2xl);
+}
+.course-curriculum {
+}
+
+.course-description h2 {
+}
+.course-curriculum h2 {
+  margin-bottom: var(--spacing-2xl);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+}
+.curriculum-content {
+  padding: var(--spacing-lg);
+  background-color: var(--muted);
+  border-radius: var(--radius-lg);
+}
+.curriculum-section {
+}
+.curriculum-section h3 {
+}
+.curriculum-lessons {
+}
+.curriculum-lesson {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--border);
+}
+.curriculum-lesson:last-child {
+  margin-bottom: var(--spacing-md);
+  border-bottom: 1px solid transparent;
+}
+.lesson-icon {
+  color: var(--primary);
+}
+.lesson-title {
+  flex: 1;
+  font-size: var(--font-size-sm);
+}
+.lesson-duration {
+  font-size: var(--font-size-sm);
+  color: var(--muted-foreground);
+}
+
+/* player layout */
+.player-layout {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+.player-main {
+  flex: 1;
+}
+.player-sidebar {
+  width: 320px;
+}
+.lesson-navigation {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+}
+.lesson-navigation button {
+  flex: 1;
+}
+.lesson-complete {
+  padding: var(--spacing-md);
+  border: 1px solid var(--border);
+  background-color: var(--muted);
+  border-radius: var(--radius-lg);
+}
+.lesson-complete label {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: center;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+/* 영상오류가 앱솔루트라 밑에는 렐러리트 */
+.video-player-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: var(--spacing-lg);
+  overflow: hidden;
+  background-color: var(--foreground);
+  border-radius: var(--radius-lg);
+  aspect-ratio: 16/9;
+}
+.video-player {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.video-error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: var(--spacing-lg);
+  color: var(--background);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  border-radius: var(--spacing-lg);
+}
+.progress-section {
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background-color: var(--muted);
+  border-radius: var(--radius-lg);
+}
+.progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-sm);
+}
+.progress-percentage {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--foreground);
+}
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  margin-bottom: var(--spacing-xs);
+  overflow: hidden;
+  background-color: var(--border);
+  border-radius: var(--radius-full);
+}
+.progress-fill {
+  height: 100%;
+  background-color: var(--primary);
+  border-radius: var(--radius-full);
+}
+.progress-info {
+  font-size: var(--font-size-sm);
+  color: var(--muted-foreground);
+}
+.curriculum {
+  margin-bottom: var(--spacing-lg);
+}
+.curriculum h3 {
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+}
+.curriculum-section {
+  margin-bottom: var(--spacing-md);
+}
+.curriculum-section h4 {
+  margin-bottom: var(--spacing-xs);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--muted-foreground);
+}
+.lesson-list {
+}
+.lesson-item {
+  margin-bottom: 2px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--spacing-md);
+}
+.lesson-item a {
+  font-size: var(--font-size-sm);
+  color: var(--foreground);
+}
+.lesson-item:hover {
+  background-color: var(--muted);
+}
+/* 띄우지말아야 레슨아이템 */
+.lesson-item.active {
+  background-color: var(--primary);
+  color: var(--background);
+}
+.lesson-item.active a {
+  color: var(--background);
+}
