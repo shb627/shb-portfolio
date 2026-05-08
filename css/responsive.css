@@ -1,0 +1,50 @@
+@media screen and (max-width: 425px) {
+  .uxui-container {
+    width: 100%;
+    display: grid;
+    gap: 40px;
+    justify-content: center;
+    padding: 120px 0;
+    grid-template-columns: 1fr;
+  }
+  .uxui-container .uxui-card {
+    /* background-color: aliceblue; */
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex: 1;
+    flex-direction: column;
+    padding: 20px 24px;
+    /* border: 1px solid #fff; */
+    overflow: hidden;
+    border-radius: 12px;
+  }
+  .uxui-card .uxui-thumbnail {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+  .uxui-card .uxui-thumbnail img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .uxui-top {
+    font-size: var(--font-size-3xl);
+    color: #fff;
+    width: 100%;
+    display: flex;
+    padding-bottom: 12px;
+    justify-content: space-between;
+  }
+  .uxui-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .link {
+    display: flex;
+    gap: 8px;
+  }
+}

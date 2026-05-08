@@ -1,6 +1,11 @@
+modalContent.innerHTML = `
+  <h2>로그인</h2>
+  <input type="text">
+`;
+
 const openModal = document.getElementById("openModal");
 const closeModal = document.getElementById("closeModal");
-const modal = document.getElementById("modal");
+const modalContent = document.getElementById("modalContent");
 
 openModal.addEventListener("click", () => {
   modal.classList.add("show");
@@ -13,24 +18,9 @@ closeModal.addEventListener("click", () => {
 });
 
 // 배경 눌렀을 때 닫기
-modal.addEventListener("click", (e) => {
+modalContent.addEventListener("click", (e) => {
   if (e.target === modal) {
     modal.classList.remove("show");
     document.body.style.overflow = "auto";
   }
-});
-
-const texts = document.querySelectorAll(".fade-text");
-
-window.addEventListener("scroll", () => {
-  texts.forEach((text) => {
-    const rect = text.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
-
-    if (rect.top < windowHeight * 0.8 && rect.bottom > 0) {
-      text.classList.add("active");
-    } else {
-      text.classList.remove("active");
-    }
-  });
 });

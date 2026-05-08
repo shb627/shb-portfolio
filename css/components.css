@@ -1,6 +1,7 @@
 /* buttons */
 .btn {
   min-height: 40px;
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -88,9 +89,7 @@
 }
 
 /* section header */
-section {
-  padding: var(--spacing-3xl) 0;
-}
+
 .section-header {
   display: flex;
   align-items: center;

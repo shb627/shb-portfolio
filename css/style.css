@@ -35,23 +35,20 @@ img {
   border: 0;
   vertical-align: middle;
 }
-section {
-  width: 100%;
-  margin: 0 auto;
-  /* padding: 40px; */
-  overflow: hidden;
-}
 
 /* layout */
 section {
   width: 100%;
   display: flex;
-  padding: 0;
+  margin: 0 auto;
+  /* padding: 40px 0; */
+  background-color: black;
 }
 
 .container {
   position: relative;
   width: 1280px;
+  height: auto;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -79,10 +76,10 @@ section {
 /* 🔥 포스터 */
 .main-poster {
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 30%;
-  width: 70%;
-  max-width: 600px;
+  width: 40%;
+  max-width: 500px;
   height: auto;
   z-index: 10;
   object-fit: contain;
@@ -94,159 +91,190 @@ section {
 }
 .introduce-page {
   position: relative;
+}
+.introduce-page .paper-container {
+  position: absolute;
+  top: 40px; /* 위로 올리기 */
+  left: 50%;
+  width: 80%;
+  height: auto;
+  z-index: 10;
+  transform: translateX(-50%);
+}
+.introduce-page .paper-container .paper {
   width: 100%;
-  min-width: 768px;
-  height: 100vh;
-  background-image: url("../assets/images/intoduce-background.svg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  object-fit: cover;
 }
 
-.middle-image {
+/* 종이 위 글 */
+.paper-container .introduce-text {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 80px;
+  text-align: center;
+  transform: translate(-50%, 10%);
+}
+
+.introduce-text h2 {
+  margin-bottom: 16px;
+  font-size: 32px;
+}
+
+.introduce-text p {
+  font-size: 40px;
+  line-height: 1.6;
+}
+.profile-text {
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  height: 30%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding: 80px;
+  text-align: center;
+  grid-template-columns: repeat(3, 1fr);
+  transform: translate(-50%, -20%);
+}
+/* 웹디자인 스티커 */
+.category-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+}
+.category-container .category-sticker {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.category-container .category-sticker img {
   width: 100%;
   display: flex;
-  justify-content: center; /* 가로 중앙 */
-  align-items: center; /* 세로 중앙 */
-  position: absolute;
+  align-items: center;
+  justify-content: flex-start;
+  object-fit: cover;
 }
 
-.middle-image img {
-  position: absolute;
-  width: 200px; /* 원하는 크기 */
-  height: auto;
-  display: block;
+/* uxui */
+.uxui-container {
+  width: 100%;
+  display: grid;
+  gap: 40px;
+  justify-content: center;
+  padding: 120px 0;
+  grid-template-columns: repeat(2, 1fr);
 }
-.introduce-page .introduce-background {
+.uxui-container .uxui-card {
+  /* background-color: aliceblue; */
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 1;
+  flex-direction: column;
+  padding: 20px 24px;
+  /* border: 1px solid #fff; */
+  overflow: hidden;
+  border-radius: 12px;
+}
+.uxui-card .uxui-thumbnail {
+  width: 100%;
+  min-height: 240px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.uxui-card .uxui-thumbnail img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
-.introduce-page .paper {
-  left: 30%;
-  width: 80%;
-  position: absolute;
-  z-index: 2;
-}
-
-.container .sun {
-  position: absolute;
-  top: 200px;
-  left: 1600px;
-  z-index: 1;
-  animation: sunMove 3s ease-in-out infinite;
-}
-
-@keyframes sunMove {
-  0% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-10px) rotate(20deg);
-  }
-  100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-}
-
-.coffee {
-  position: absolute;
-  right: 750px;
-  bottom: -10px;
-  z-index: 1;
-}
-.coffee1 {
-  bottom: -350px;
-  left: 700px;
-  z-index: 2;
-  animation: coffee1Move 3s ease-in-out infinite;
-}
-@keyframes coffee1Move {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-.coffee2 {
-  bottom: -90px;
-  left: 900px;
-}
-.coffee3 {
-  bottom: -230px;
-  left: 420px;
-}
-
-.train {
-  position: absolute;
-  bottom: 0;
-  left: -900px;
-
-  z-index: 1;
-  animation: moveRight 15s linear infinite;
-}
-.train img {
-  width: 500px;
-  height: auto;
-}
-
-@keyframes moveRight {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(4000px);
-  }
-}
-
-/* introduce */
-.introuduce {
-  position: relative;
+.uxui-top {
+  font-size: var(--font-size-3xl);
+  color: #fff;
   width: 100%;
-  height: 1080px;
-  background-color: #4085ff;
-}
-.check {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: auto;
-}
-.check img {
-  width: 100%;
-}
-.label-container {
   display: flex;
-  gap: 50px;
+  padding-bottom: 12px;
+  justify-content: space-between;
+}
+.uxui-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.link {
+  display: flex;
+  gap: 8px;
+}
+
+/* 상세페이지 스와이퍼 */
+
+.detail-container {
+  display: flex;
   align-items: center;
-  flex-direction: column;
-  padding: 100px 0;
-}
-.worklabel:hover {
+  justify-content: space-between;
+  padding: 120px 0;
 }
 
-/* 사람이미지 */
-.working {
-  top: 0;
-}
-.working img {
-  width: 50px;
-  height: auto;
-}
-
-/*intro-설명- section */
-.introduce-discription {
+.swiper-slide .detail-card {
   position: relative;
   width: 100%;
+  object-fit: cover;
 }
-.introduce-discription img {
+.detail-card .detail-card-paper {
+  position: relative;
   width: 100%;
+  object-fit: cover;
+}
+.detail-card .detail-thumbnail {
+  position: absolute;
+  width: 80%;
   height: auto;
+}
+.detail-card .detail-thumbnail .thumbnail-img {
+  width: 100%;
+}
+
+/* 카드뉴스 */
+.cardnews-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 120px 0;
+}
+.cardnews-swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.cardnews-swiper .swiper-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.cardnews-swiper .swiper-slide {
+  width: 50%;
+  background-position: center;
+  background-size: cover;
+  /* width: 200px;
+  height: 200px; */
+}
+
+.cardnews-swiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* 모달연습 */
