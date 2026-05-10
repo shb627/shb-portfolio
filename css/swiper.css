@@ -1,9 +1,42 @@
+/* 상세페이지 스와이퍼 */
+
+.detail-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  padding: 120px 0;
+}
 .detail-swiper {
-  width: 565px;
-  height: 832px;
+  width: 70%;
+  height: auto;
 }
 
 .detail-swiper .swiper-wrapper {
+  width: 100%;
+}
+.detail-swiper .swiper-slide {
+  width: 100%;
+  height: auto;
+}
+
+.swiper-slide .detail-card {
+  position: relative;
+  width: 100%;
+  object-fit: cover;
+}
+.detail-card .detail-card-paper {
+  position: relative;
+  width: 100%;
+  object-fit: cover;
+}
+.detail-card .detail-thumbnail {
+  position: relative;
+  width: 80%;
+  height: auto;
+}
+.detail-thumbnail .detail-img {
+  position: absolute;
   width: 100%;
 }
 

@@ -19,6 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const swiper = new Swiper(".detail-swiper", {
       effect: "cards",
       grabCursor: true,
+      loop: true,
+      autoplay: { delay: 3000 },
       keyboard: {
         enabled: true,
         onlyInViewport: true,

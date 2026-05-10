@@ -20,67 +20,51 @@
     <script src="./js/pages/script.js" defer></script>
   </head>
   <body>
-    <section class="main">
+    <div class="main">
       <img src="./assets/images/main-poster.svg" alt="" class="main-poster" />
-      <img src="./assets/images/main-background.jpg" alt="" class="main-bg" />
-    </section>
-    <section class="introduce-page">
-      <div class="paper-container">
-        <img src="./assets/images/paper-1.jpg" alt="" class="paper" />
-        <div class="introduce-text">
+      <img
+        src="./assets/images/introduce-profile/main-background.svg"
+        alt=""
+        class="main-bg"
+      />
+    </div>
+    <div class="introduce-page-container">
+      <div class="introduce-page"></div>
+    </div>
+
+    <div class="profile-container">
+      <div class="profile-page">
+        <div class="container">
           <h2>ABOUT ME</h2>
-          <p>
-            <!-- 대통령의 임기연장 또는 중임변경을 위한 헌법개정은 그 헌법개정 제안
-            당시의 대통령에 대하여는 효력이 없다. 대통령은
-            국무총리·국무위원·행정각부의 장 기타 법률이 정하는 공사의 직을 겸할
-            수 없다. 평화통일정책의 수립에 관한 대통령의 자문에 응하기 위하여
-            민주평화통일자문회의를 둘 수 있다. 정부는 예산에 변경을 가할 필요가
-            있을 때에는 추가경정예산안을 편성하여 국회에 제출할 수 있다. 제2항과
-            제3항의 처분에 대하여는 법원에 제소할 수 없다. 누구든지 체포 또는
-            구속을 당한 때에는 즉시 변호인의 조력을 받을 권리를 가진다. 다만,
-            형사피고인이 스스로 변호인을 구할 수 없을 때에는 법률이 정하는 바에
-            의하여 국가가 변호인을 붙인다. 국회는 국가의 예산안을 심의·확정한다. -->
-          </p>
-        </div>
-        <h2>ABOUT ME</h2>
-        <div class="profile-text">
-          <p>
-            대통령의 임기연장 또는 중임변경을 위한 헌법개정은 그 헌법개정 제안
-          </p>
-          <p>
-            대통령의 임기연장 또는 중임변경을 위한 헌법개정은 그 헌법개정 제안
-          </p>
-          <p>
-            대통령의 임기연장 또는 중임변경을 위한 헌법개정은 그 헌법개정 제안
-          </p>
-          <p>
-            대통령의 임기연장 또는 중임변경을 위한 헌법개정은 그 헌법개정 제안
-          </p>
-          <p>
-            대통령의 임기연장 또는 중임변경을 위한 헌법개정은 그 헌법개정 제안
-          </p>
+          <div class="profile-text">
+            <div class="award">
+              <p>(디지털디자인) UI/UX 디자인 및 개발(웹, 앱, 피그마)</p>
+            </div>
+            <div class="award">
+              <p>운전면허 1종 대형</p>
+              <p>운전면허 2종 보통</p>
+            </div>
+            <div class="award">
+              <p>정보보호 창작 공모전 웹툰 (팀)</p>
+              <p>
+                그라폴리오 x galaxy theme 갤럭시s10 배경화면 공모전 (최우수)
+              </p>
+              <p>
+                컬쳐플 주최 ‘지푸라기라고 잡고 싶은 짐승들’ 아트 콜라보 공모전
+                (우수)
+              </p>
+              <p>DIFF N POSTER ‘힘찬이는 자라서’포스터 리디자인</p>
+              <p>(외주) ‘수학영재 형주' 콘티 작업</p>
+              <p>영화 그림 콘티 워크숍 강의</p>
+            </div>
+          </div>
         </div>
       </div>
-
-      <img
-        src="./assets/images/intoduce-background-2.svg"
-        alt=""
-        class="introduce-background"
-      />
-    </section>
-
-    <!-- <div class="paper-wrap">
-      <img src="./assets/images/paper-1.jpg" alt="" class="paper" />
-    </div> -->
+    </div>
 
     <!-- uxui -->
     <section>
       <div class="container">
-        <div class="category-container">
-          <div class="category-sticker">
-            <img src="./assets/images/web-design-sticker.svg" alt="" />
-          </div>
-        </div>
         <div class="uxui-container">
           <div class="uxui-card">
             <a href="" class="uxui-thumbnail"
@@ -108,7 +92,10 @@
             </div>
           </div>
           <div class="uxui-card">
-            <a href="" class="uxui-thumbnail"
+            <a
+              href="https://shb627.github.io/redesign-project/"
+              target="_blank"
+              class="uxui-thumbnail"
               ><img
                 src="./assets/images/uxui-webdesign/megamorning.svg"
                 alt="행복북구문화재단 썸네일"
@@ -127,8 +114,13 @@
                 <img src="./assets/icons/chatgpt.svg" alt="" />
               </div>
               <div class="link">
-                <a href=""> <button>process</button> </a>
-                <a href=""> <button>link</button> </a>
+                <a href=""> <div class="btn">Process</div> </a>
+                <a
+                  href="https://shb627.github.io/redesign-project/"
+                  target="_blank"
+                >
+                  <div class="btn">Link</div>
+                </a>
               </div>
             </div>
           </div>
@@ -152,8 +144,10 @@
                 <img src="./assets/icons/chatgpt.svg" alt="" />
               </div>
               <div class="link">
-                <a href=""> <button>process</button> </a>
-                <a href=""> <button>link</button> </a>
+                <!-- <a href=""> <div class="btn">Process</div> </a> -->
+                <a href="https://shb0627.cafe24.com/" target="_blank">
+                  <div class="btn">Link</div>
+                </a>
               </div>
             </div>
           </div>
@@ -177,9 +171,58 @@
                 <img src="./assets/icons/chatgpt.svg" alt="" />
               </div>
               <div class="link">
-                <a href=""> <button>process</button> </a>
-                <a href=""> <button>link</button> </a>
+                <a href=""> <div class="btn">Process</div> </a>
+                <a href=""> <div class="btn">Link</div> </a>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="app-design">
+          <div class="acha-left">
+            <img src="./assets/images/app-design/acha.svg" alt="" />
+          </div>
+          <div class="acha-right">
+            <div class="acha-info">
+              <p class="sub-title">건망증 체크 앱 디자인</p>
+              <h1>아차</h1>
+              <p>
+                개인프로젝트
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%
+              </p>
+              <div class="skill">
+                <!-- <img src="./assets/icons/aftereffect.svg" alt="" /> -->
+                <img src="./assets/icons/illustration.svg" alt="" />
+                <img src="./assets/icons/photoshop.svg" alt="" />
+                <img src="./assets/icons/figma.svg" alt="" />
+                <!-- <img src="./assets/icons/vscode.svg" alt="" /> -->
+                <img src="./assets/icons/chatgpt.svg" alt="" />
+              </div>
+              <p>Overview</p>
+              <p class="overview-text">
+                건망증으로 ‘항상 챙겨야 한다, 깜빡하면 안된다’ 하면서도 결국 집
+                밖에 나와야 생각나거나 외출 또는 여행을 나올 때 ‘가스불 껐나?’
+                하는 고민들은 많이 겪어 보셨을 겁니다. 이러한 같은 실수를
+                반복하고 깜빡하는게 습관이 되어버린 사람들에게 도움이 되고자
+                건망증 개선 어플을 제작하게되었습니다.
+              </p>
+            </div>
+            <div class="acha-link">
+              <a href=""
+                ><img
+                  src="./assets/images/app-design/process-sticker.svg"
+                  alt=""
+              /></a>
+              <a
+                href="https://www.figma.com/proto/VFb9qgcpVVFT5VDt9lYZiQ/Untitled?node-id=0-787&viewport=-759%2C-253%2C0.16&t=GcXRyl9RZTWZbmF5-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=0%3A678&page-id=0%3A1"
+                target="_blank"
+                ><img
+                  src="./assets/images/app-design/prototype-sticker.svg"
+                  alt=""
+              /></a>
             </div>
           </div>
         </div>
@@ -207,21 +250,21 @@
                     <img
                       src="./assets/images/detailpage/seiko-thumbnail.jpg"
                       alt=""
-                      class="thumbnail-img"
+                      class="detail-img"
                     />
                   </a>
                 </div>
               </div>
               <!-- 세이코 모달 -->
-              <!-- <div class="image-modal">
-              <button class="modal-close">✕</button>
+              <div class="image-modal">
+                <button class="modal-close">✕</button>
 
-              <img
-                src="./assets/images/detailpage/seiko-thumbnail.jpg"
-                alt=""
-                class="modal-img"
-              />
-            </div> -->
+                <img
+                  src="./assets/images/detailpage/seiko-thumbnail.jpg"
+                  alt=""
+                  class="modal-img"
+                />
+              </div>
 
               <!-- 르샤트라 -->
               <div class="swiper-slide">
@@ -256,22 +299,37 @@
                 <img src="./assets/images/cardnews/sns-banner.png" />
               </div>
               <div class="swiper-slide">
-                <img src="./assets/images/cardnews/cardnews-1.png" />
+                <img src="./assets/images/cardnews/taco-2.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/cardnews/taco-3.png" />
               </div>
               <div class="swiper-slide">
                 <img src="./assets/images/cardnews/cardnews-1.png" />
               </div>
               <div class="swiper-slide">
-                <img src="./assets/images/cardnews/cardnews-1.png" />
+                <img src="./assets/images/cardnews/cardnews-2.png" />
               </div>
               <div class="swiper-slide">
-                <img src="./assets/images/cardnews/cardnews-1.png" />
+                <img src="./assets/images/cardnews/cardnews-3.png" />
               </div>
               <div class="swiper-slide">
-                <img src="./assets/images/cardnews/cardnews-1.png" />
+                <img src="./assets/images/cardnews/cardnews-4.png" />
               </div>
               <div class="swiper-slide">
-                <img src="./assets/images/cardnews/cardnews-1.png" />
+                <img src="./assets/images/cardnews/cardnews-5.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/cardnews/cardnews-6.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/cardnews/cardnews-7.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/cardnews/cardnews-8.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/cardnews/lecoma-1.png" />
               </div>
             </div>
             <div class="swiper-pagination"></div>

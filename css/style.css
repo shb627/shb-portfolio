@@ -39,9 +39,10 @@ img {
 /* layout */
 section {
   width: 100%;
+  height: auto;
   display: flex;
   margin: 0 auto;
-  /* padding: 40px 0; */
+  padding: 40px 0;
   background-color: black;
 }
 
@@ -56,27 +57,18 @@ section {
 /* 첫번째 */
 
 .main {
-  position: relative;
   width: 100%;
-  height: 100vh; /* 중요 */
-  max-height: 1080px;
+  height: auto;
+  display: flex;
+  margin: 0 auto;
+  position: relative;
   overflow: hidden;
 }
 
-/* 🔥 배경 */
-.main-bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  inset: 0; /* top:0 left:0 right:0 bottom:0 */
-  object-fit: cover;
-}
-
-/* 🔥 포스터 */
+/* 포스터 */
 .main-poster {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 30%;
   width: 40%;
   max-width: 500px;
@@ -85,83 +77,61 @@ section {
   object-fit: contain;
   transform: translateY(-50%);
 }
-.main-background {
+
+.main-bg {
   position: relative;
   width: 100%;
-}
-.introduce-page {
-  position: relative;
-}
-.introduce-page .paper-container {
-  position: absolute;
-  top: 40px; /* 위로 올리기 */
-  left: 50%;
-  width: 80%;
   height: auto;
-  z-index: 10;
-  transform: translateX(-50%);
-}
-.introduce-page .paper-container .paper {
-  width: 100%;
+  z-index: 0;
   object-fit: cover;
 }
-
-/* 종이 위 글 */
-.paper-container .introduce-text {
-  position: absolute;
-  top: 0px;
-  left: 50%;
+.introduce-page-container {
   width: 100%;
-  height: 30%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: column;
-  padding: 80px;
-  text-align: center;
-  transform: translate(-50%, 10%);
+}
+.introduce-page-container .introduce-page {
+  width: 100%;
+  aspect-ratio: 1920 / 1080;
+
+  background-image: url("../assets/images/introduce-profile/introduce-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
 }
 
-.introduce-text h2 {
-  margin-bottom: 16px;
-  font-size: 32px;
+.profile-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
-.introduce-text p {
-  font-size: 40px;
-  line-height: 1.6;
+.profile-container .profile-page {
+  width: 100%;
+  aspect-ratio: 1920 / 1080;
+
+  background-image: url("../assets/images/introduce-profile/profile-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
 }
-.profile-text {
+
+.container .profile-text {
   position: absolute;
   left: 50%;
   width: 100%;
-  height: 30%;
   display: grid;
+  margin: 0 auto;
   align-items: center;
   justify-content: center;
   padding: 80px;
   text-align: center;
   grid-template-columns: repeat(3, 1fr);
   transform: translate(-50%, -20%);
-}
-/* 웹디자인 스티커 */
-.category-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0;
-}
-.category-container .category-sticker {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-.category-container .category-sticker img {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  object-fit: cover;
 }
 
 /* uxui */
@@ -189,7 +159,7 @@ section {
 }
 .uxui-card .uxui-thumbnail {
   width: 100%;
-  min-height: 240px;
+  height: 320px;
   overflow: hidden;
   border-radius: 12px;
 }
@@ -216,32 +186,68 @@ section {
   gap: 8px;
 }
 
-/* 상세페이지 스와이퍼 */
-
-.detail-container {
+/* 앱디자인 */
+.app-design {
+  width: 100%;
   display: flex;
+  gap: 40px;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  padding: 120px 0;
+  color: #fff;
 }
-
-.swiper-slide .detail-card {
-  position: relative;
+.app-design .acha-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  object-fit: cover;
+  flex: 1;
 }
-.detail-card .detail-card-paper {
-  position: relative;
-  width: 100%;
-  object-fit: cover;
-}
-.detail-card .detail-thumbnail {
-  position: absolute;
-  width: 80%;
+.app-design .acha-left img {
+  width: 90%;
   height: auto;
 }
-.detail-card .detail-thumbnail .thumbnail-img {
+.app-design .acha-right {
+  display: flex;
   width: 100%;
+  flex: 2;
+  flex-direction: column;
+}
+.acha-info {
+  display: flex;
+  flex-direction: column;
+}
+.acha-info .sub-title {
+  font-size: 14px;
+  font-weight: 200;
+}
+.acha-info h1 {
+  font-size: 64px;
+  padding-bottom: 20px;
+}
+.acha-info .skill {
+  padding-bottom: 40px;
+}
+.acha-link {
+  gap: 24px;
+
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.acha-link a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.acha-link a:hover {
+  transform: scale(1.08) rotate(-4deg);
+}
+.acha-link img {
+  width: 90%;
+  display: flex;
+}
+.acha-info .overview-text {
+  padding-bottom: 40px;
 }
 
 /* 카드뉴스 */
