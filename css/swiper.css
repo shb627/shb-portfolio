@@ -5,9 +5,8 @@
   align-items: center;
   width: 100%;
   justify-content: center;
-  padding: 120px 0;
 }
-.detail-swiper {
+.detail-container .detail-swiper {
   width: 70%;
   height: auto;
 }

@@ -10,11 +10,14 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
+    <!-- AOS -->
+
     <link rel="stylesheet" href="css/modal.css" />
     <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/swiper.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/swiper.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <script src="./js/pages/cardNews.js"></script>
     <script src="./js/pages/modal.js"></script>
@@ -30,37 +33,68 @@
       />
     </div>
     <div class="introduce-page-container">
-      <div class="introduce-page"></div>
+      <div class="introduce-page">
+        <div class="introduce-text">
+          <p>그래픽 감성과 사용자 경험을 연결하는 웹디자이너입니다</p>
+        </div>
+      </div>
     </div>
 
-    <div class="profile-wrapper">
+    <div class="profile-container">
       <div class="profile-page">
-        <div class="profile-container">
-          <div class="profile-top">
-            <h2>ABOUT ME</h2>
-            <div class="profile-photo"></div>
+        <div class="profile-text">
+          <!-- <h2>ABOUT ME</h2> -->
+          <div class="profile-photo">
+            <img src="./assets/images/profile-picture-2.png" alt="" />
           </div>
-          <div class="profile-bottom">
-            <div class="award">
-              <p>(디지털디자인) UI/UX 디자인 및 개발(웹, 앱, 피그마)</p>
+          <div class="information">
+            <p>송현빈</p>
+            <p>1995.06.27</p>
+            <p>veeny95@naver.com</p>
+            <p></p>
+            <div class="skill">
+              <!-- <img src="./assets/icons/aftereffect.svg" alt="" /> -->
+              <img src="./assets/icons/illustration.svg" alt="" />
+              <img src="./assets/icons/photoshop.svg" alt="" />
+              <img src="./assets/icons/figma.svg" alt="" />
+              <img src="./assets/icons/vscode.svg" alt="" />
+              <img src="./assets/icons/chatgpt.svg" alt="" />
             </div>
-            <div class="award">
-              <p>운전면허 1종 대형</p>
-              <p>운전면허 2종 보통</p>
-            </div>
-            <div class="award">
-              <p>정보보호 창작 공모전 웹툰 (팀)</p>
-              <p>
-                그라폴리오 x galaxy theme 갤럭시s10 배경화면 공모전 (최우수)
-              </p>
-              <p>
-                컬쳐플 주최 ‘지푸라기라고 잡고 싶은 짐승들’ 아트 콜라보 공모전
-                (우수)
-              </p>
-              <p>DIFF N POSTER ‘힘찬이는 자라서’포스터 리디자인</p>
-              <p>(외주) ‘수학영재 형주' 콘티 작업</p>
-              <p>영화 그림 콘티 워크숍 강의</p>
-            </div>
+          </div>
+          <div class="education">
+            <p>2014.03 ~ 2021.02</p>
+            <p>영남대학교 시각디자인학과</p>
+            <p>2016.02 ~ 2017. 10</p>
+            <p>15사단 수색대대 병장 만기전역</p>
+          </div>
+          <div class="award">
+            <h1>Experience</h1>
+            <p>컬러잉 북 삽화</p>
+            <p>YSTAR A&D 서포즈 1기 수료</p>
+            <p>YSTAR A&D 서포즈 2기 수료</p>
+            <p>(외주) ‘식물카페, 온정’ 콘티 작업</p>
+            <p>(외주) ‘수학영재 형주' 콘티 작업</p>
+            <p>영화 그림 콘티 워크숍 강의</p>
+            <p>(디지털디자인) UI/UX 디자인 및 개발(웹, 앱, 피그마)</p>
+          </div>
+          <div class="award">
+            <h1>License</h1>
+
+            <p>운전면허 1종 대형</p>
+            <p>운전면허 2종 보통</p>
+          </div>
+          <div class="award">
+            <h1>Award</h1>
+
+            <p>정보보호 창작 공모전 웹툰 (팀)</p>
+            <p>그라폴리오 x galaxy theme 갤럭시s10 배경화면 공모전 (최우수)</p>
+            <p>
+              컬쳐플 주최 ‘지푸라기라고 잡고 싶은 짐승들’ 아트 콜라보 공모전
+              (우수)
+            </p>
+            <p>DIFF N POSTER ‘힘찬이는 자라서’포스터 리디자인</p>
+            <p>(외주) ‘수학영재 형주' 콘티 작업</p>
+            <p>영화 그림 콘티 워크숍 강의</p>
           </div>
         </div>
       </div>
@@ -140,6 +174,8 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="uxui-card-bottom">
           <div class="uxui-card">
             <a href="" class="uxui-thumbnail"
               ><img
@@ -167,35 +203,13 @@
               </div>
             </div>
           </div>
-          <div class="uxui-card">
-            <a href="" class="uxui-thumbnail"
-              ><img
-                src="./assets/images/uxui-webdesign/megamorning.svg"
-                alt="메가모닝챌린지"
-            /></a>
-            <div class="uxui-top">
-              <p class="title">메가모닝 챌린지</p>
-              <p class="sub-title">100%</p>
-            </div>
-            <div class="uxui-bottom">
-              <div class="skill">
-                <!-- <img src="./assets/icons/aftereffect.svg" alt="" /> -->
-                <img src="./assets/icons/illustration.svg" alt="" />
-                <img src="./assets/icons/photoshop.svg" alt="" />
-                <img src="./assets/icons/figma.svg" alt="" />
-                <img src="./assets/icons/vscode.svg" alt="" />
-                <img src="./assets/icons/chatgpt.svg" alt="" />
-              </div>
-              <div class="link">
-                <a href=""> <div class="btn">Process</div> </a>
-                <a href=""> <div class="btn">Link</div> </a>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
     <section>
+      <div class="category-container">
+        <img src="./assets/images/web-design-sticker.svg" alt="" />
+      </div>
       <div class="container">
         <div class="app-design">
           <div class="acha-left">
@@ -238,7 +252,7 @@
                   alt=""
               /></a>
               <a
-                href="https://www.figma.com/proto/VFb9qgcpVVFT5VDt9lYZiQ/Untitled?node-id=0-787&viewport=-759%2C-253%2C0.16&t=GcXRyl9RZTWZbmF5-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=0%3A678&page-id=0%3A1"
+                href="https://shb627.github.io/mood-here/home.html"
                 target="_blank"
                 ><img
                   src="./assets/images/app-design/prototype-sticker.svg"
@@ -251,8 +265,8 @@
     </section>
     <section>
       <div class="container">
-        <div class="app-design">
-          <div class="acha-right">
+        <div class="app-design acha-mb">
+          <div class="acha-right acha-reverse">
             <div class="acha-info">
               <p class="sub-title">건망증 체크 앱 디자인</p>
               <h1>아차</h1>
@@ -286,7 +300,7 @@
                   alt=""
               /></a>
               <a
-                href="https://www.figma.com/proto/VFb9qgcpVVFT5VDt9lYZiQ/Untitled?node-id=0-787&viewport=-759%2C-253%2C0.16&t=GcXRyl9RZTWZbmF5-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=0%3A678&page-id=0%3A1"
+                href="https://www.figma.com/proto/sYV7S9CrzpgX1uzv5Wujjh/%EC%95%B1-%EB%94%94%EC%9E%90%EC%9D%B8_%EC%86%A1%ED%98%84%EB%B9%88?node-id=11-139&viewport=-889%2C-339%2C0.31&t=VffBvtFqxIWS7s3y-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=55%3A1064&page-id=0%3A1"
                 target="_blank"
                 ><img
                   src="./assets/images/app-design/prototype-sticker.svg"
@@ -303,6 +317,9 @@
 
     <!-- 상세페이지 -->
     <section>
+      <div class="category-container">
+        <img src="./assets/images/" alt="" />
+      </div>
       <!-- Swiper -->
       <div class="container">
         <div class="detail-container">
@@ -363,6 +380,10 @@
       </div>
     </section>
     <section>
+      <div class="category-container">
+        <p>cardnews/sns-banner</p>
+        <img src="./assets/images/sticker.svg" alt="" />
+      </div>
       <div class="container">
         <div class="cardnews-container">
           <div class="swiper cardnews-swiper">
@@ -409,8 +430,47 @@
         </div>
       </div>
     </section>
-    <section></section>
-    <section></section>
+    <section>
+      <div class="container">
+        <!-- <div class="cardnews-container"> -->
+        <div
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+          class="aos"
+        >
+          <div class="branding-img-container">
+            <img
+              src="./assets/images/branding/"
+              alt=""
+              class="branding-thumbnail"
+            />
+          </div>
+
+          <img src="./assets/images/branding/forme-thumbnail.png" alt="" />
+        </div>
+
+        <!-- </div> -->
+      </div>
+      <div class="container">
+        <div
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+          class="aos"
+        >
+          <div class="branding-img-container">
+            <img
+              src="./assets/images/branding/"
+              alt=""
+              class="branding-thumbnail"
+            />
+          </div>
+
+          <img src="./assets/images/branding/vertex-thumbnail.svg" alt="" />
+        </div>
+      </div>
+    </section>
 
     <!-- 모달 -->
     <div class="modal" id="imageModal">
@@ -422,6 +482,11 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- Aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="./js/pages/aos.js"></script>
+
     <!-- ES 모듈 방식의 앱 진입점 -->
     <script type="module" src="js/app.js"></script>
   </body>
