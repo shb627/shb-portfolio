@@ -41,6 +41,7 @@ section {
   width: 100%;
   height: auto;
   display: flex;
+  flex-direction: column;
   margin: 0 auto;
   padding: 40px 0;
   background-color: black;
@@ -48,20 +49,30 @@ section {
 
 .container {
   position: relative;
-  width: 1280px;
+  max-width: 1280px;
   height: auto;
   margin: 0 auto;
   padding: 0 24px;
 }
 
+.category-container {
+  width: 100%;
+  height: auto;
+}
+
+.category-container img {
+  display: block;
+  width: auto;
+  height: 120px;
+}
 /* 첫번째 */
 
 .main {
+  position: relative;
   width: 100%;
   height: auto;
   display: flex;
   margin: 0 auto;
-  position: relative;
   overflow: hidden;
 }
 
@@ -91,45 +102,60 @@ section {
   justify-content: center;
 }
 .introduce-page-container .introduce-page {
+  position: relative;
   width: 100%;
-  aspect-ratio: 1920 / 1080;
 
   background-image: url("../assets/images/introduce-profile/introduce-background.png");
-  background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
-
-  position: relative;
+  background-position: center;
+  background-size: cover;
+  aspect-ratio: 1920 / 1080;
 }
 
-.profile-container {
+.profile-wraper {
+  width: 100%;
   display: flex;
   justify-content: center;
+}
+.profile-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px;
+}
+.profile-top {
+  width: 100%;
+  display: flex;
+}
+.profile-top .profile-photo {
+  width: 100%;
+}
+.profile-top .profile-photo img {
   width: 100%;
 }
 
-.profile-container .profile-page {
+.profile-wraper .profile-page {
+  position: relative;
   width: 100%;
-  aspect-ratio: 1920 / 1080;
 
   background-image: url("../assets/images/introduce-profile/profile-background.png");
-  background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
-
-  position: relative;
+  background-position: center;
+  background-size: cover;
+  aspect-ratio: 1920 / 1080;
 }
 
-.container .profile-text {
+.profile-container .profile-bottom {
   position: absolute;
   left: 50%;
   width: 100%;
   display: grid;
-  margin: 0 auto;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
   padding: 80px;
   text-align: center;
+  box-sizing: border-box;
   grid-template-columns: repeat(3, 1fr);
   transform: translate(-50%, -20%);
 }
@@ -157,6 +183,13 @@ section {
   overflow: hidden;
   border-radius: 12px;
 }
+.uxui-card a {
+  background-color: #fff;
+}
+.uxui-card a .redesign-logo {
+  width: 100%;
+  object-fit: cover;
+}
 .uxui-card .uxui-thumbnail {
   width: 100%;
   height: 320px;
@@ -169,12 +202,12 @@ section {
   object-fit: cover;
 }
 .uxui-top {
-  font-size: var(--font-size-3xl);
-  color: #fff;
   width: 100%;
   display: flex;
-  padding-bottom: 12px;
   justify-content: space-between;
+  padding-bottom: 12px;
+  font-size: var(--font-size-3xl);
+  color: #fff;
 }
 .uxui-bottom {
   width: 100%;
@@ -191,15 +224,15 @@ section {
   width: 100%;
   display: flex;
   gap: 40px;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   color: #fff;
 }
 .app-design .acha-left {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex: 1;
 }
 .app-design .acha-left img {
@@ -207,8 +240,8 @@ section {
   height: auto;
 }
 .app-design .acha-right {
-  display: flex;
   width: 100%;
+  display: flex;
   flex: 2;
   flex-direction: column;
 }
@@ -221,17 +254,16 @@ section {
   font-weight: 200;
 }
 .acha-info h1 {
-  font-size: 64px;
   padding-bottom: 20px;
+  font-size: 64px;
 }
 .acha-info .skill {
   padding-bottom: 40px;
 }
 .acha-link {
-  gap: 24px;
-
   width: 100%;
   display: flex;
+  gap: 24px;
   justify-content: flex-start;
 }
 .acha-link a {
@@ -277,9 +309,9 @@ section {
 }
 
 .cardnews-swiper .swiper-slide img {
-  display: block;
   width: 100%;
   height: 100%;
+  display: block;
   object-fit: cover;
 }
 

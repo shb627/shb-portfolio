@@ -10,6 +10,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="css/modal.css" />
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
@@ -32,11 +33,14 @@
       <div class="introduce-page"></div>
     </div>
 
-    <div class="profile-container">
+    <div class="profile-wrapper">
       <div class="profile-page">
-        <div class="container">
-          <h2>ABOUT ME</h2>
-          <div class="profile-text">
+        <div class="profile-container">
+          <div class="profile-top">
+            <h2>ABOUT ME</h2>
+            <div class="profile-photo"></div>
+          </div>
+          <div class="profile-bottom">
             <div class="award">
               <p>(디지털디자인) UI/UX 디자인 및 개발(웹, 앱, 피그마)</p>
             </div>
@@ -64,10 +68,16 @@
 
     <!-- uxui -->
     <section>
+      <div class="category-container">
+        <img src="./assets/images/web-design-sticker.svg" alt="" />
+      </div>
       <div class="container">
         <div class="uxui-container">
           <div class="uxui-card">
-            <a href="" class="uxui-thumbnail"
+            <a
+              href="https://www.figma.com/proto/LfRS4v79idsyJeLSjUbKA1/%EC%86%A1%ED%98%84%EB%B9%88_%EB%9E%9C%EB%94%A9%ED%8E%98%EC%9D%B4%EC%A7%80?node-id=191-22002&viewport=-437%2C66%2C0.12&t=8oCBaHVHWJL93ykG-1&scaling=contain&content-scaling=fixed&starting-point-node-id=2%3A2&page-id=0%3A1"
+              class="uxui-thumbnail"
+              target="_blank"
               ><img
                 src="./assets/images/uxui-webdesign/megamorning.svg"
                 alt="메가모닝챌린지"
@@ -86,8 +96,13 @@
                 <img src="./assets/icons/chatgpt.svg" alt="" />
               </div>
               <div class="link">
-                <a href=""> <div class="btn">Process</div> </a>
-                <a href=""> <div class="btn">Link</div> </a>
+                <!-- <a href=""> <div class="btn">Process</div> </a> -->
+                <a
+                  href="https://www.figma.com/proto/LfRS4v79idsyJeLSjUbKA1/%EC%86%A1%ED%98%84%EB%B9%88_%EB%9E%9C%EB%94%A9%ED%8E%98%EC%9D%B4%EC%A7%80?node-id=191-22002&viewport=-437%2C66%2C0.12&t=8oCBaHVHWJL93ykG-1&scaling=contain&content-scaling=fixed&starting-point-node-id=2%3A2&page-id=0%3A1"
+                  target="_blank"
+                >
+                  <div class="btn">Link</div>
+                </a>
               </div>
             </div>
           </div>
@@ -97,8 +112,9 @@
               target="_blank"
               class="uxui-thumbnail"
               ><img
-                src="./assets/images/uxui-webdesign/megamorning.svg"
+                src="./assets/images/redesign/logo_header.png"
                 alt="행복북구문화재단 썸네일"
+                class="redesign-logo"
             /></a>
             <div class="uxui-top">
               <p class="title">행복북구문화재단</p>
@@ -183,8 +199,59 @@
       <div class="container">
         <div class="app-design">
           <div class="acha-left">
-            <img src="./assets/images/app-design/acha.svg" alt="" />
+            <img src="./assets/images/uxui-webdesign/mood-here.svg" alt="" />
           </div>
+          <div class="acha-right">
+            <div class="acha-info">
+              <p class="sub-title">위치 기반 감정 기록 서비스</p>
+              <h1>무드히어</h1>
+              <p>
+                개인프로젝트
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%
+              </p>
+              <div class="skill">
+                <!-- <img src="./assets/icons/aftereffect.svg" alt="" /> -->
+                <img src="./assets/icons/illustration.svg" alt="" />
+                <img src="./assets/icons/photoshop.svg" alt="" />
+                <img src="./assets/icons/figma.svg" alt="" />
+                <img src="./assets/icons/vscode.svg" alt="" />
+                <img src="./assets/icons/chatgpt.svg" alt="" />
+              </div>
+              <p>Overview</p>
+              <p class="overview-text">
+                기존의 기록 방식은 단순히 텍스트로 감정을 남기는 데 그치는
+                경우가 많았습니다. 이에 저는 감정을 보다 직관적으로 표현하고,
+                기록 자체에 즐거움을 더하고자 이 서비스를 기획하게 되었습니다.
+                이 서비스는 감정을 날씨 아이콘 형태로 시각화하여, 특정 장소와
+                함께 지도 위에 저장하는 것이 특징입니다. 사용자는 ‘어디에서 어떤
+                감정을 느꼈는지’를 중심으로 자신의 감정을 공간과 연결해 축적할
+                수 있으며, 이를 통해 일상의 순간들을 더욱 의미 있는 기억으로
+                확장하는 경험을 제공합니다.
+              </p>
+            </div>
+            <div class="acha-link">
+              <a
+                href="./assets/images/app-design/acha-process.svg"
+                class="modal-link"
+                ><img
+                  src="./assets/images/app-design/process-sticker.svg"
+                  alt=""
+              /></a>
+              <a
+                href="https://www.figma.com/proto/VFb9qgcpVVFT5VDt9lYZiQ/Untitled?node-id=0-787&viewport=-759%2C-253%2C0.16&t=GcXRyl9RZTWZbmF5-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=0%3A678&page-id=0%3A1"
+                target="_blank"
+                ><img
+                  src="./assets/images/app-design/prototype-sticker.svg"
+                  alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="app-design">
           <div class="acha-right">
             <div class="acha-info">
               <p class="sub-title">건망증 체크 앱 디자인</p>
@@ -211,7 +278,9 @@
               </p>
             </div>
             <div class="acha-link">
-              <a href=""
+              <a
+                href="./assets/images/app-design/acha-process.svg"
+                class="modal-link"
                 ><img
                   src="./assets/images/app-design/process-sticker.svg"
                   alt=""
@@ -224,6 +293,9 @@
                   alt=""
               /></a>
             </div>
+          </div>
+          <div class="acha-left">
+            <img src="./assets/images/app-design/acha.svg" alt="" />
           </div>
         </div>
       </div>
@@ -340,62 +412,14 @@
     <section></section>
     <section></section>
 
-    <!-- 클릭할 이미지 -->
-
-    <div class="gallery">
-      <img
-        src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop"
-        alt="샘플 이미지"
-        class="thumb"
-        id="openModal"
-      />
-    </div>
-
     <!-- 모달 -->
-    <div class="modal" id="modal">
-      <button class="close-btn" id="closeModal">✕</button>
-
+    <div class="modal" id="imageModal">
       <div class="modal-content">
-        <img
-          src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1800&auto=format&fit=crop"
-          alt="큰 이미지"
-          class="modal-image"
-        />
-
-        <div class="modal-text">
-          <h2>이미지 상세 보기</h2>
-          <p>
-            이 영역은 모달 안쪽 내용입니다. 내용이 길어지면 모달 내부에서
-            스크롤됩니다.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
-            vero, explicabo earum magni possimus fugit, aliquam fugiat
-            voluptatem necessitatibus inventore recusandae molestias.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
-            vero, explicabo earum magni possimus fugit, aliquam fugiat
-            voluptatem necessitatibus inventore recusandae molestias.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
-            vero, explicabo earum magni possimus fugit, aliquam fugiat
-            voluptatem necessitatibus inventore recusandae molestias.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
-            vero, explicabo earum magni possimus fugit, aliquam fugiat
-            voluptatem necessitatibus inventore recusandae molestias.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
-            vero, explicabo earum magni possimus fugit, aliquam fugiat
-            voluptatem necessitatibus inventore recusandae molestias.
-          </p>
-        </div>
+        <button class="modal-close">&times;</button>
+        <img src="" alt="" id="modalImage" />
       </div>
     </div>
+
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <!-- ES 모듈 방식의 앱 진입점 -->
