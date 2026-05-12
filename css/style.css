@@ -15,13 +15,15 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  width: 100%;
   overflow-x: hidden;
   /* background-color: var(--background); */
-  font-family: var(--font-family);
+  font-family: var(--font-main);
   font-size: var(--font-size-base);
   line-height: 1.5;
   color: var(--foreground);
   letter-spacing: -0.02em;
+  background-color: #000;
 }
 ul,
 li {
@@ -50,21 +52,33 @@ section {
 .container {
   position: relative;
   max-width: 1280px;
+  width: 100%;
   height: auto;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 40px;
 }
 
 .category-container {
+  display: flex;
+  align-items: center;
   position: relative;
+  background-color: #000;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
   width: 100%;
-  height: auto;
+  height: 50px;
+  color: #fff;
+  padding: 0 24px;
+  overflow: hidden;
 }
-.category-container p {
+.category-info {
+  color: #fff;
+}
+/* .category-container p {
   position: absolute;
   font-size: 24px;
   font-weight: 800;
-}
+} */
 
 .category-container img {
   position: relative;
@@ -105,20 +119,59 @@ section {
 }
 .introduce-page-container {
   width: 100%;
-  display: flex;
-  justify-content: center;
 }
+
 .introduce-page-container .introduce-page {
+  width: 100%;
+  min-height: 110vh;
+}
+
+.introduce-page {
   position: relative;
   width: 100%;
-
-  background-image: url("../assets/images/introduce-profile/introduce-background.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  aspect-ratio: 1920 / 1080;
+  overflow: hidden;
 }
-.introduce-page .introduce-text {
+
+.introduce-bg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 이미지 위에 올라가는 영역 */
+.introduce-content {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 80px 40px;
+}
+
+/* 텍스트 */
+.introduce-text {
+  text-align: center;
+  color: #fff;
+  font-size: 32px;
+}
+
+/* grid */
+.profile-text {
+  max-width: 1280px;
+  margin: 80px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  color: #fff;
+}
+
+.profile-photo {
+  width: 70%;
+}
+.profile-photo img {
+  width: 100%;
+}
+
+/* .introduce-page .introduce-text {
   width: 100%;
   height: 100%;
   display: flex;
@@ -126,59 +179,40 @@ section {
   justify-content: center;
 }
 
-.profile-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.profile-container .profile-page {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("../assets/images/introduce-profile/profile-background.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  aspect-ratio: 1920 / 1080;
-}
-
 .profile-page .profile-text {
   width: 60%;
   height: auto;
   display: grid;
-  row-gap: 40px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, auto);
-  /* align-items: center; */
   justify-content: center;
   font-size: 16px;
   font-weight: 500;
+  row-gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
 }
 
 .profile-text .profile-photo {
+  width: 100%;
   display: flex;
   align-items: center;
-  width: 100%;
 }
 .profile-text .profile-photo img {
   width: 200px;
 }
 .profile-text .information {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
   width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+  flex-direction: column;
 }
 .profile-text .education {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
   width: 100%;
-}
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+  flex-direction: column;
+} */
 
 /* uxui */
 .uxui-container {
@@ -198,10 +232,11 @@ section {
   justify-content: center;
   flex: 1;
   flex-direction: column;
-  padding: 20px 24px;
+  padding: 20px 20px;
   /* border: 1px solid #fff; */
   overflow: hidden;
   border-radius: 12px;
+  /* background-color: #7f7f7f; */
 }
 .uxui-card a {
   background-color: #fff;
@@ -212,20 +247,25 @@ section {
 }
 .uxui-card .uxui-thumbnail {
   width: 100%;
-  height: 320px;
+  max-height: 320px;
+  display: flex;
+
+  justify-content: center;
   overflow: hidden;
+  aspect-ratio: 16/9;
   border-radius: 12px;
 }
 .uxui-card .uxui-thumbnail img {
-  width: 100%;
-  height: 100%;
+  width: 200%;
+  height: auto;
   object-fit: cover;
 }
 .uxui-top {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding-bottom: 12px;
+  padding-top: 8px;
+  padding-bottom: 24px;
   font-size: var(--font-size-3xl);
   color: #fff;
 }
@@ -260,22 +300,40 @@ section {
   justify-content: center;
   color: #fff;
 }
-.app-design .acha-left {
-  width: 100%;
+
+.app-design .moodhere-left {
+  width: 80%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex: 1;
+  justify-content: flex-start;
+  flex: 2;
 }
-.app-design .acha-left img {
+
+.app-design .moodhere-left img {
   width: 80%;
   height: auto;
 }
 .app-design .acha-right {
   width: 100%;
   display: flex;
-  flex: 2;
+  flex: 3;
   flex-direction: column;
+}
+.acha-reverse {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+.acha-reverse.overview-text {
+  text-align: left;
+}
+.app-design .acha-left {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 2;
 }
 
 .acha-info {
@@ -286,12 +344,44 @@ section {
   font-size: 14px;
   font-weight: 200;
 }
+.acha-info .part {
+  padding-bottom: 12px;
+}
+.overview-container {
+  border: 1px solid #7f7f7f;
+  color: #e8e8e8;
+  background-color: #000000;
+  padding: 20px 20px 30px;
+  margin-bottom: 40px;
+  border-radius: 16px;
+}
+.acha-info .overview {
+  padding-bottom: 12px;
+}
 .acha-info h1 {
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   font-size: 64px;
 }
 .acha-info .skill {
   padding-bottom: 40px;
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.acha-info .acha-skill {
+  padding-bottom: 40px;
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.acha-info .skill img {
+  width: 10%;
 }
 .acha-link {
   width: 100%;
@@ -312,7 +402,6 @@ section {
   display: flex;
 }
 .acha-info .overview-text {
-  padding-bottom: 40px;
 }
 
 /* 카드뉴스 */
@@ -320,12 +409,12 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 80px 0;
+  /* padding: 40px 0; */
 }
 .cardnews-swiper {
   width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  /* padding-top: 50px;
+  padding-bottom: 50px; */
 }
 .cardnews-swiper .swiper-wrapper {
   width: 100%;
@@ -335,6 +424,7 @@ section {
 
 .cardnews-swiper .swiper-slide {
   width: 50%;
+  border: 1px solid #000;
   background-position: center;
   background-size: cover;
   /* width: 200px;
@@ -368,18 +458,18 @@ section {
 /* 부모 컨테이너 */
 .aos {
   position: relative;
-  display: flex;
   width: 100%;
   height: 500px; /* 위치 확인을 위해 높이 임의 지정 */
+  display: flex;
 }
 
 /* 1. 이미지 자체를 50px로 고정하고 싶은 경우 */
 .aos .branding-thumbnail {
+  position: absolute;
+  top: 10%;
+  left: 10%;
   width: 50px !important; /* 강제로 크기 지정 */
   height: auto;
-  position: absolute;
-  left: 10%;
-  top: 10%;
   object-fit: contain; /* cover보다 이미지 깨짐이 덜함 */
 }
 

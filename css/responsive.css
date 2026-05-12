@@ -1,7 +1,10 @@
 @media screen and (max-width: 425px) {
-  p {
-    font-size: 12px;
+  .container {
+    padding: 0 24px;
   }
+  /* p {
+    font-size: 12px;
+  } */
   .app-design {
     width: 100%;
     display: flex;
@@ -31,13 +34,43 @@
   .app-design {
     flex-direction: column;
   }
+  .acha-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .overview-container {
+    border: 1px solid #7f7f7f;
+    color: #e8e8e8;
+    font-size: 16px;
+    background-color: #000000;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 16px;
+  }
 
   .acha-left {
     order: 1;
   }
+  .app-design .moodhere-left {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 2;
+  }
 
   .acha-right {
     order: 2;
+  }
+
+  .app-design .acha-right {
+    width: 100%;
+    display: flex;
+    flex: 3;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 }
 
@@ -81,7 +114,8 @@
     color: #fff;
     width: 100%;
     display: flex;
-    padding-bottom: 12px;
+    padding-bottom: 24px;
+    padding-top: 8px;
     justify-content: space-between;
   }
   .uxui-bottom {

@@ -1,10 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/subsets/Pretendard-dynamic-subset.css");
+@import url("https://fonts.googleapis.com/css2?family=Sirivennela&display=swap"rel="stylesheet");
 
 /* 변수  */
 /* 
 - 디자인 토큰 (design token)
 - 색상, 간격, 타이포그래피, 그림자 등 전역 변수
 */
+
+.sirivennela-regular {
+  font-family: "Sirivennela", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 :root {
   /* colors */
@@ -46,7 +53,9 @@
 
   /* typography */
 
-  --font-family: "Noto Sans KR", sans-serif;
+  --font-main: "Pretendard", sans-serif;
+  --font-point: "Sirivennela", sans-serif;
+
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;

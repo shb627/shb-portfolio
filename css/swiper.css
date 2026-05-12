@@ -1,53 +1,60 @@
 /* 상세페이지 스와이퍼 */
 
-.detail-container {
+.detail-swiper {
+  aspect-ratio: 3/4;
+  width: 50%;
+  height: auto;
+}
+
+.detail-swiper .swiper-slide {
+  background-image: url("../assets/images/paper-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  height: 100%;
+
   display: flex;
   align-items: center;
-  width: 100%;
   justify-content: center;
-}
-.detail-container .detail-swiper {
-  width: 70%;
-  height: auto;
-}
 
-.detail-swiper .swiper-wrapper {
-  width: 100%;
+  color: black;
+  font-size: 40px;
+  font-weight: 600;
 }
-.detail-swiper .swiper-slide {
-  width: 100%;
-  height: auto;
-}
-
-.swiper-slide .detail-card {
-  position: relative;
-  width: 100%;
-  object-fit: cover;
-}
-.detail-card .detail-card-paper {
-  position: relative;
-  width: 100%;
-  object-fit: cover;
-}
-.detail-card .detail-thumbnail {
-  position: relative;
+.detail-swiper .swiper-slide .image-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   width: 80%;
-  height: auto;
+  mix-blend-mode: multiply;
 }
-.detail-thumbnail .detail-img {
-  position: absolute;
+.detail-title {
   width: 100%;
-}
-
-.detail-swiper .swiper-slide {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
+  justify-content: space-between;
+  margin: 0;
+  color: rgb(73, 73, 73);
+  font-family: var(--font-point);
+  font-size: 24px;
   font-weight: bold;
-  color: #fff;
+  padding-bottom: 24px;
+}
+.detail-swiper .swiper-slide .modal-img {
+  width: 100%;
+  aspect-ratio: 3 / 4; /* 원하는 비율 */
+  overflow: hidden;
+  border-radius: 16px;
 }
 
+.detail-swiper .swiper-slide .modal-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 .swiper-slide:nth-child(1n) {
   background-color: rgb(206, 17, 17);
 }

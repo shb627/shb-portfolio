@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
       effect: "cards",
       grabCursor: true,
       loop: true,
-      autoplay: { delay: 3000 },
+      // autoplay: { delay: 3000 },
       keyboard: {
         enabled: true,
         onlyInViewport: true,
