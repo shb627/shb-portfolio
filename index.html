@@ -33,14 +33,72 @@
   </head>
   <body>
     <div class="main">
-      <img src="./assets/images/main-poster.png" alt="" class="main-poster" />
       <img
-        src="./assets/images/introduce-profile/main-background.svg"
+        src="./assets/images/balck-sticker-1.png"
+        alt=""
+        class="black-sticker-1"
+      />
+      <img
+        src="./assets/images/balck-sticker-1.png"
+        alt=""
+        class="black-sticker-2"
+      />
+
+      <img
+        src="./assets/images/introduce-profile/main-background-3.png"
         alt=""
         class="main-bg"
       />
+      <div class="main-poster-wrap">
+        <img src="./assets/images/main-poster.png" alt="" class="main-poster" />
+        <div class="main-poster-sticker-wrap">
+          <a href="#web">
+            <img
+              src="./assets/images/main-sticker-webdesign.png"
+              alt="main-poster-sticker"
+              class="category-sticker"
+            />
+          </a>
+          <a href="#uxui">
+            <img
+              src="./assets/images/main-sticker-uxui.png"
+              alt="main-poster-sticker"
+              class="category-sticker"
+            />
+          </a>
+          <a href="#detail">
+            <img
+              src="./assets/images/main-sticker-detail.png"
+              alt="main-poster-sticker"
+              class="category-sticker"
+            />
+          </a>
+          <a href="#cardNews">
+            <img
+              src="./assets/images/main-sticker-banner.png"
+              alt="main-poster-sticker"
+              class="category-sticker"
+            />
+          </a>
+
+          <a href="#branding">
+            <img
+              src="./assets/images/main-sticker-branding.png"
+              alt="main-poster-sticker"
+              class="category-sticker"
+            />
+          </a>
+          <a href="#etc">
+            <img
+              src="./assets/images/main-sticker-etc.png"
+              alt="main-poster-sticker"
+              class="category-sticker"
+            />
+          </a>
+        </div>
+      </div>
     </div>
-    <section>
+    <div class="main-container">
       <div class="main">
         <div class="introduce-page">
           <img
@@ -49,25 +107,15 @@
             class="introduce-bg"
           />
 
-          <div class="introduce-content">
+          <div class="profile-content">
             <div class="profile-text">
-              <div class="introduce-page-container">
-                <div class="introduce-page">
-                  <div class="introduce-text">
-                    <p>그래픽 감성과 사용자 경험을 연결하는 웹디자이너입니다</p>
-                  </div>
-                  <div class="profile-container">
-                    <div class="profile-page">
-                      <div class="profile-text"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
               <!-- <h2>ABOUT ME</h2> -->
               <div class="profile-photo">
                 <img src="./assets/images/profile-picture-3.png" alt="" />
               </div>
               <div class="information">
+                <h1 class="profile-title">About&nbsp;me</h1>
+
                 <p>송현빈</p>
                 <p>1995.06.27</p>
                 <p>veeny95@naver.com</p>
@@ -79,32 +127,39 @@
                   <img src="./assets/icons/figma.svg" alt="" />
                   <img src="./assets/icons/vscode.svg" alt="" />
                   <img src="./assets/icons/chatgpt.svg" alt="" />
+                  <img src="./assets/icons/aftereffect.svg" alt="" />
+                  <img src="./assets/icons/HTML.svg" alt="" />
+                  <img src="./assets/icons/CSS.svg" alt="" />
+                  <img src="./assets/icons/JavaScript.svg" alt="" />
                 </div>
               </div>
+
               <div class="education">
+                <h1 class="profile-title">Education</h1>
+
                 <p>2014.03 ~ 2021.02</p>
                 <p>영남대학교 시각디자인학과</p>
                 <p>2016.02 ~ 2017. 10</p>
                 <p>15사단 수색대대 병장 만기전역</p>
               </div>
               <div class="award">
-                <h1>Experience</h1>
-                <p>컬러잉 북 삽화</p>
-                <p>YSTAR A&D 서포즈 1기 수료</p>
-                <p>YSTAR A&D 서포즈 2기 수료</p>
-                <p>(외주) ‘식물카페, 온정’ 콘티 작업</p>
-                <p>(외주) ‘수학영재 형주' 콘티 작업</p>
-                <p>영화 그림 콘티 워크숍 강의</p>
-                <p>(디지털디자인) UI/UX 디자인 및 개발(웹, 앱, 피그마)</p>
+                <h1 class="profile-title">Experience</h1>
+                <p>• 컬러잉 북 삽화</p>
+                <p>• YSTAR A&D 서포즈 1기 수료</p>
+                <p>• YSTAR A&D 서포즈 2기 수료</p>
+                <p>• (외주) ‘식물카페, 온정’ 콘티 작업</p>
+                <p>• (외주) ‘수학영재 형주' 콘티 작업</p>
+                <p>• 영화 그림 콘티 워크숍 강의</p>
+                <p>• (디지털디자인) UI/UX 디자인 및 개발(웹, 앱, 피그마)</p>
               </div>
               <div class="award">
-                <h1>License</h1>
+                <h1 class="profile-title">License</h1>
 
                 <p>운전면허 1종 대형</p>
                 <p>운전면허 2종 보통</p>
               </div>
               <div class="award">
-                <h1>Award</h1>
+                <h1 class="profile-title">Award</h1>
 
                 <p>정보보호 창작 공모전 웹툰 (팀)</p>
                 <p>
@@ -122,10 +177,10 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- web desing -->
-    <div class="container">
+    <div class="container" id="web">
       <div class="category-container">
         <span>WEB DESIGN</span>
       </div>
@@ -232,7 +287,7 @@
         </div>
       </div>
     </section>
-    <div class="container">
+    <div class="container" id="uxui">
       <div class="category-container">
         <span>UX/UI DESIGN</span>
       </div>
@@ -346,7 +401,7 @@
     </section>
 
     <!-- 상세페이지 -->
-    <div class="container">
+    <div class="container" id="detail">
       <div class="category-container">
         <span>DETAIL PAGE & WEB POSTER</span>
       </div>
@@ -426,7 +481,7 @@
         </div>
       </div>
     </section>
-    <div class="container">
+    <div class="container" id="cardNews">
       <div class="category-container">
         <span>CARD NEWS & SNS BANNER</span>
       </div>
@@ -480,7 +535,7 @@
       </div>
     </section>
     <!-- 브랜딩 -->
-    <div class="container">
+    <div class="container" id="branding">
       <div class="category-container">
         <span>BRANDING / LOGO DESIGN</span>
       </div>
