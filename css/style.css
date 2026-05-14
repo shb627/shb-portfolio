@@ -154,12 +154,28 @@ section {
   gap: 8px;
 }
 .main-poster-sticker-wrap .category-sticker {
-  display: flex;
-  align-items: center;
-  width: 100%;
   flex: 1;
   box-shadow: 6px 6px 8px 0px rgba(0, 0, 0, 0.5);
+
+  width: 100%;
+  display: block;
+
+  /* 핵심 */
+  transform-origin: top right;
+
+  transition:
+    transform 0.45s ease,
+    filter 0.45s ease;
+
+  filter: drop-shadow(6px 6px 8px 0px rgba(0, 0, 0, 0.5));
 }
+
+.category-sticker:hover {
+  transform: rotate(-4deg) translateY(14px) skewY(2deg) scale(1.02);
+
+  filter: drop-shadow(0 24px 20px rgba(0, 0, 0, 0.28));
+}
+
 .main-poster-sticker {
   position: relative;
   top: 30%;
