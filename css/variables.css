@@ -1,6 +1,6 @@
 @import url("https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/subsets/Pretendard-dynamic-subset.css");
 @import url("https://fonts.googleapis.com/css2?family=Sirivennela&display=swap"rel="stylesheet");
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 /* 변수  */
 /* 
 - 디자인 토큰 (design token)
@@ -55,6 +55,7 @@
 
   --font-main: "Pretendard", sans-serif;
   --font-point: "Sirivennela", sans-serif;
+  --font-en: "Montserrat", sans-serif;
 
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;

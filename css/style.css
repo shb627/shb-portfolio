@@ -148,44 +148,34 @@ section {
   box-shadow: 6px 9px 11px rgba(0, 0, 0, 0.5);
 }
 .main-poster-wrap .main-poster-sticker-wrap {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  display: flex;
+  align-items: flex-end; /* 하단 기준 정렬 */
   gap: 8px;
 }
 .main-poster-sticker-wrap .category-sticker {
   flex: 1;
-  box-shadow: 6px 6px 8px 0px rgba(0, 0, 0, 0.5);
-
   width: 100%;
   display: block;
 
-  /* 핵심 */
-  transform-origin: top right;
+  /* 오른쪽 상단 꼭짓점 고정 */
+  transform-origin: top left;
 
   transition:
-    transform 0.45s ease,
-    filter 0.45s ease;
+    transform 0.5s cubic-bezier(0.59, 0.23, 0.15, 1.01),
+    filter 0.4s ease;
+  cursor: grab;
 
-  filter: drop-shadow(6px 6px 8px 0px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
 }
 
-.category-sticker:hover {
-  transform: rotate(-4deg) translateY(14px) skewY(2deg) scale(1.02);
+/* 뜯기는 느낌 */
+.main-poster-sticker-wrap .category-sticker:hover {
+  cursor: grabbing;
 
-  filter: drop-shadow(0 24px 20px rgba(0, 0, 0, 0.28));
-}
-
-.main-poster-sticker {
-  position: relative;
-  top: 30%;
-  left: 10%;
-  width: 100%;
-  height: auto;
+  /* 회전값은 그대로 유지 */
+  transform: rotate(-8deg) translateX(6px) translateY(10px);
   z-index: 10;
-  object-fit: contain;
-  transform: translateY(-50%);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(0 20px 18px rgba(0, 0, 0, 0.28));
 }
 
 .introduce-page {
@@ -214,7 +204,7 @@ section {
   width: 100%;
   gap: 16px;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   top: 0;
 }
 
@@ -230,6 +220,7 @@ section {
   margin-bottom: 28px;
   font-weight: 800;
   width: 50%;
+  font-family: var(--font-en);
 }
 
 /* uxui */
