@@ -25,8 +25,8 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/swiper.css" />
     <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="css/modal.css" />
@@ -36,6 +36,12 @@
     <script src="./js/pages/cardNews.js"></script>
     <script src="./js/pages/modal.js" defer></script>
     <script src="./js/pages/script.js" defer></script>
+
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/bd66e01c7b.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="main">
@@ -107,28 +113,54 @@
     <div class="main-container">
       <div class="main">
         <div class="introduce-page">
-          <img
-            src="./assets/images/introduce-background.svg"
-            alt=""
-            class="introduce-bg"
-          />
+          <picture>
+            <!-- 모바일 -->
+            <source
+              srcset="./assets/images/introduce-background-mb.svg"
+              media="(max-width: 425px)"
+            />
+
+            <!-- PC 기본 -->
+            <img
+              src="./assets/images/introduce-background.svg"
+              alt=""
+              class="introduce-bg"
+            />
+          </picture>
 
           <div class="profile-content">
+            <div class="profile-introduce">
+              <img src="./assets/images/introduce-profile/clover.png" alt="" />
+              <h1 data-aos="marker">
+                "보기 편하고 깔끔한 디자인을 추구하는 웹디자이너 송현빈입니다!"
+              </h1>
+              <img src="./assets/images/introduce-profile/clover.png" alt="" />
+            </div>
             <div class="profile-text">
               <!-- <h2>ABOUT ME</h2> -->
-              <div class="information"></div>
-              <div class="information"></div>
-              <div class="information"></div>
               <div class="profile-photo">
-                <img src="./assets/images/profile-picture-3.png" alt="" />
+                <img
+                  src="./assets/images/introduce-profile/profile-img.png"
+                  alt=""
+                />
               </div>
               <div class="information">
                 <h1 class="profile-title">About&nbsp;me</h1>
 
-                <p>송현빈</p>
+                <p>송현빈 HYEON BIN SONG</p>
                 <p>1995.06.27</p>
-                <p>veeny95@naver.com</p>
-                <p></p>
+                <br />
+                <a href="tel:010-9321-1630">
+                  <p class="call">
+                    <i class="fa-solid fa-phone"></i>&nbsp;010-9321-1630
+                  </p></a
+                >
+                <a href="mailto:veeny95@naver.com"
+                  ><p class="call">
+                    <i class="fa-solid fa-envelope"></i>&nbsp;veeny95@naver.com
+                  </p></a
+                >
+                <br />
                 <div class="skill">
                   <!-- <img src="./assets/icons/aftereffect.svg" alt="" /> -->
                   <img src="./assets/icons/illustration.svg" alt="" />
@@ -136,6 +168,7 @@
                   <img src="./assets/icons/figma.svg" alt="" />
                   <img src="./assets/icons/vscode.svg" alt="" />
                   <img src="./assets/icons/chatgpt.svg" alt="" />
+                  <br />
                   <img src="./assets/icons/aftereffect.svg" alt="" />
                   <img src="./assets/icons/HTML.svg" alt="" />
                   <img src="./assets/icons/CSS.svg" alt="" />
@@ -145,15 +178,16 @@
 
               <div class="education">
                 <h1 class="profile-title">Education</h1>
-
-                <p>2014.03 ~ 2021.02</p>
-                <p>영남대학교 시각디자인학과</p>
-                <p>2016.02 ~ 2017. 10</p>
-                <p>15사단 수색대대 병장 만기전역</p>
+                <p>• 대구 구암고등학교</p>
+                <p class="edu-date">2011.03 ~ 2014.02 (졸업)</p>
+                <p>• 15사단 수색대대 병장 만기전역</p>
+                <p class="edu-date">2016.02 ~ 2017. 10</p>
+                <p>• 영남대학교 시각디자인학과</p>
+                <p class="edu-date">2014.03 ~ 2021.02 (졸업)</p>
               </div>
               <div class="award">
                 <h1 class="profile-title">Experience</h1>
-                <p>• 컬러잉 북 삽화</p>
+                <p>• 컬러링 북 삽화 작업</p>
                 <p>• YSTAR A&D 서포즈 1기 수료</p>
                 <p>• YSTAR A&D 서포즈 2기 수료</p>
                 <p>• (외주) ‘식물카페, 온정’ 콘티 작업</p>
@@ -164,23 +198,23 @@
               <div class="award">
                 <h1 class="profile-title">License</h1>
 
-                <p>운전면허 1종 대형</p>
-                <p>운전면허 2종 보통</p>
+                <p>• 운전면허 1종 대형</p>
+                <p>• 운전면허 2종 보통</p>
               </div>
               <div class="award">
                 <h1 class="profile-title">Award</h1>
 
-                <p>정보보호 창작 공모전 웹툰 (팀)</p>
+                <p>• 정보보호 창작 공모전 웹툰 (팀)</p>
                 <p>
-                  그라폴리오 x galaxy theme 갤럭시s10 배경화면 공모전 (최우수)
+                  • 그라폴리오 x galaxy theme 갤럭시s10 배경화면 공모전 (최우수)
                 </p>
                 <p>
-                  컬쳐플 주최 ‘지푸라기라고 잡고 싶은 짐승들’ 아트 콜라보 공모전
-                  (우수)
+                  • 컬쳐플 주최 ‘지푸라기라고 잡고 싶은 짐승들’ 아트 콜라보
+                  공모전 (우수)
                 </p>
-                <p>DIFF N POSTER ‘힘찬이는 자라서’포스터 리디자인</p>
-                <p>(외주) ‘수학영재 형주' 콘티 작업</p>
-                <p>영화 그림 콘티 워크숍 강의</p>
+                <p>• DIFF N POSTER ‘힘찬이는 자라서’포스터 리디자인</p>
+                <p>• (외주) ‘수학영재 형주' 콘티 작업</p>
+                <p>• 영화 그림 콘티 워크숍 강의</p>
               </div>
             </div>
           </div>
@@ -191,26 +225,26 @@
     <!-- web desing -->
     <div class="container" id="web">
       <div class="category-container">
-        <span>WEB DESIGN</span>
+        <span>WEB DESIGN / CAFE24</span>
       </div>
     </div>
     <section>
       <div class="container">
-        <div class="uxui-container">
-          <div class="uxui-card">
+        <div class="web-container">
+          <div class="web-card">
             <a
               href="https://www.figma.com/proto/LfRS4v79idsyJeLSjUbKA1/%EC%86%A1%ED%98%84%EB%B9%88_%EB%9E%9C%EB%94%A9%ED%8E%98%EC%9D%B4%EC%A7%80?node-id=191-22002&viewport=-437%2C66%2C0.12&t=8oCBaHVHWJL93ykG-1&scaling=contain&content-scaling=fixed&starting-point-node-id=2%3A2&page-id=0%3A1"
-              class="uxui-thumbnail"
+              class="web-thumbnail"
               target="_blank"
               ><img
                 src="./assets/images/uxui-webdesign/megamorning.svg"
                 alt="메가모닝챌린지"
             /></a>
-            <div class="uxui-top">
+            <div class="web-top">
               <p class="title">메가모닝 챌린지</p>
-              <p class="sub-title">100%</p>
+              <p class="sub-title">기여도&nbsp;&nbsp;&nbsp;100%</p>
             </div>
-            <div class="uxui-bottom">
+            <div class="web-bottom">
               <div class="skill">
                 <!-- <img src="./assets/icons/aftereffect.svg" alt="" /> -->
                 <img src="./assets/icons/illustration.svg" alt="" />
@@ -223,28 +257,29 @@
                 <!-- <a href=""> <div class="btn">Process</div> </a> -->
                 <a
                   href="https://www.figma.com/proto/LfRS4v79idsyJeLSjUbKA1/%EC%86%A1%ED%98%84%EB%B9%88_%EB%9E%9C%EB%94%A9%ED%8E%98%EC%9D%B4%EC%A7%80?node-id=191-22002&viewport=-437%2C66%2C0.12&t=8oCBaHVHWJL93ykG-1&scaling=contain&content-scaling=fixed&starting-point-node-id=2%3A2&page-id=0%3A1"
+                  class="btn"
                   target="_blank"
                 >
-                  <div class="btn">Link</div>
+                  <p>Link</p>
                 </a>
               </div>
             </div>
           </div>
-          <div class="uxui-card">
+          <div class="web-card">
             <a
               href="https://shb627.github.io/redesign-project/"
               target="_blank"
-              class="uxui-thumbnail"
+              class="web-thumbnail"
               ><img
                 src="./assets/images/redesign/redesign-logo-2.svg"
                 alt="행복북구문화재단 썸네일"
                 class="redesign-logo"
             /></a>
-            <div class="uxui-top">
+            <div class="web-top">
               <p class="title">행복북구문화재단</p>
-              <p class="sub-title">100%</p>
+              <p class="sub-title">기여도&nbsp;&nbsp;&nbsp;100%</p>
             </div>
-            <div class="uxui-bottom">
+            <div class="web-bottom">
               <div class="skill">
                 <!-- <img src="./assets/icons/aftereffect.svg" alt="" /> -->
                 <img src="./assets/icons/illustration.svg" alt="" />
@@ -254,31 +289,33 @@
                 <img src="./assets/icons/chatgpt.svg" alt="" />
               </div>
               <div class="link">
-                <a href="./eoul-process.html">
-                  <div class="btn">Process</div>
+                <a href="./eoul-process.html" class="btn" target="_blank">
+                  <p>Process</p>
                 </a>
                 <a
                   href="https://shb627.github.io/redesign-project/"
+                  class="btn"
                   target="_blank"
                 >
-                  <div class="btn">Link</div>
+                  <p>Link</p>
                 </a>
               </div>
             </div>
           </div>
         </div>
-        <div class="uxui-card-bottom">
-          <div class="uxui-card">
-            <a href="" class="uxui-thumbnail"
+        <div class="web-card-bottom">
+          <div class="web-card">
+            <a href="" class="web-thumbnail"
               ><img
                 src="./assets/images/cafe24/cafe24-thumbnail.png"
-                alt="메가모닝챌린지"
+                alt="카페24 papa09"
             /></a>
-            <div class="uxui-top">
+            <div class="web-top">
               <p class="title">카페24 papa09</p>
-              <p class="sub-title">100%</p>
+
+              <p class="sub-title">기여도&nbsp;&nbsp;&nbsp;100%</p>
             </div>
-            <div class="uxui-bottom">
+            <div class="web-bottom">
               <div class="skill">
                 <!-- <img src="./assets/icons/aftereffect.svg" alt="" /> -->
                 <img src="./assets/icons/illustration.svg" alt="" />
@@ -289,8 +326,12 @@
               </div>
               <div class="link">
                 <!-- <a href=""> <div class="btn">Process</div> </a> -->
-                <a href="https://shb0627.cafe24.com/" target="_blank">
-                  <div class="btn">Link</div>
+                <a
+                  href="https://shb0627.cafe24.com/"
+                  target="_blank"
+                  class="btn"
+                >
+                  <p>Link</p>
                 </a>
               </div>
             </div>
@@ -313,15 +354,16 @@
             <div class="acha-info">
               <p class="sub-title">위치 기반 감정 기록 서비스</p>
               <h1>무드히어</h1>
-              <span class="part"> 개인프로젝트 </span>
-              <span class="part"> 100% </span>
-              <div class="skill">
-                <!-- <img src="./assets/icons/aftereffect.svg" alt="" /> -->
-                <img src="./assets/icons/illustration.svg" alt="" />
-                <img src="./assets/icons/photoshop.svg" alt="" />
-                <img src="./assets/icons/figma.svg" alt="" />
-                <img src="./assets/icons/vscode.svg" alt="" />
-                <img src="./assets/icons/chatgpt.svg" alt="" />
+              <div class="sub-title-bottom">
+                <div class="skill">
+                  <!-- <img src="./assets/icons/aftereffect.svg" alt="" /> -->
+                  <img src="./assets/icons/illustration.svg" alt="" />
+                  <img src="./assets/icons/photoshop.svg" alt="" />
+                  <img src="./assets/icons/figma.svg" alt="" />
+                  <img src="./assets/icons/vscode.svg" alt="" />
+                  <img src="./assets/icons/chatgpt.svg" alt="" />
+                </div>
+                <span class="part">개인프로젝트&nbsp;&nbsp;100%</span>
               </div>
               <div class="overview-container">
                 <p class="overview">Overview</p>
@@ -339,9 +381,7 @@
               </div>
             </div>
             <div class="acha-link">
-              <a
-                href="./assets/images/app-design/acha-process.svg"
-                class="modal-link"
+              <a href="./acha-pocess.html" class="modal-link" target="_blank"
                 ><img
                   src="./assets/images/app-design/process-sticker.svg"
                   alt=""
@@ -365,17 +405,18 @@
             <div class="acha-info">
               <p class="sub-title">건망증 체크 앱 디자인</p>
               <h1>아차</h1>
-              <span class="part"> 개인프로젝트 </span>
-              <span class="part"> 100% </span>
-
-              <div class="skill acha-skill">
-                <!-- <img src="./assets/icons/aftereffect.svg" alt="" /> -->
-                <img src="./assets/icons/illustration.svg" alt="" />
-                <img src="./assets/icons/photoshop.svg" alt="" />
-                <img src="./assets/icons/figma.svg" alt="" />
-                <!-- <img src="./assets/icons/vscode.svg" alt="" /> -->
-                <img src="./assets/icons/chatgpt.svg" alt="" />
+              <div class="sub-title-bottom">
+                <div class="skill">
+                  <!-- <img src="./assets/icons/aftereffect.svg" alt="" /> -->
+                  <img src="./assets/icons/illustration.svg" alt="" />
+                  <img src="./assets/icons/photoshop.svg" alt="" />
+                  <img src="./assets/icons/figma.svg" alt="" />
+                  <img src="./assets/icons/vscode.svg" alt="" />
+                  <img src="./assets/icons/chatgpt.svg" alt="" />
+                </div>
+                <span class="part">개인프로젝트&nbsp;&nbsp;100%</span>
               </div>
+
               <div class="overview-container">
                 <p class="overview">Overview</p>
                 <p class="overview-text">
@@ -388,9 +429,7 @@
               </div>
             </div>
             <div class="acha-link">
-              <a
-                href="./assets/images/app-design/acha-process.svg"
-                class="modal-link"
+              <a href="./acha-pocess.html" class="modal-link" target="_blank"
                 ><img
                   src="./assets/images/app-design/process-sticker.svg"
                   alt=""
@@ -552,44 +591,94 @@
       </div>
     </div>
     <section>
-      <div class="container">
-        <!-- <div class="cardnews-container"> -->
-        <div
-          data-aos="fade-right"
-          data-aos-duration="1000"
-          data-aos-delay="200"
-          class="aos"
-        >
-          <div class="branding-img-container">
+      <div class="branding-container">
+        <!-- 버텍스 -->
+
+        <a href="./for-me-process.html" class="modal-link" target="_blank">
+          <div
+            class="branding-sticker"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
             <img
-              src="./assets/images/branding/"
+              src="./assets/images/branding/branding-sticker.svg"
               alt=""
-              class="branding-thumbnail"
+              class="sticker-bg"
             />
+            <div class="branding-thumbnail-container">
+              <img
+                src="./assets/images/branding/vertex-thumbnail.svg"
+                alt=""
+                class="branding-thumbnail"
+              />
+              <div class="branding-info">
+                <p class="sub-title">버텍스 로고 디자인 공모전 참여</p>
+                <h1>VERTEX 로고 디자인 공모전</h1>
+                <div class="sub-title-bottom">
+                  <div class="skill">
+                    <!-- <img src="./assets/icons/aftereffect.svg" alt="" /> -->
+                    <img src="./assets/icons/illustration.svg" alt="" />
+                    <img src="./assets/icons/photoshop.svg" alt="" />
+                    <!-- <img src="./assets/icons/figma.svg" alt="" />
+                  <img src="./assets/icons/vscode.svg" alt="" />
+                  <img src="./assets/icons/chatgpt.svg" alt="" /> -->
+                  </div>
+                  <span class="part">개인프로젝트&nbsp;&nbsp;100%</span>
+                </div>
+                <div class="overview-container">
+                  <p class="overview">Overview</p>
+                  <p class="overview-text">버텍스의</p>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <img src="./assets/images/branding/forme-thumbnail.png" alt="" />
-        </div>
-
-        <!-- </div> -->
-      </div>
-      <div class="container">
-        <div
-          data-aos="fade-left"
-          data-aos-duration="1000"
-          data-aos-delay="200"
-          class="aos"
-        >
-          <div class="branding-img-container">
+        </a>
+        <!-- 포미 브랜딩 -->
+        <a href="./for-me-process.html" class="modal-link" target="_blank">
+          <div
+            class="branding-sticker"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
             <img
-              src="./assets/images/branding/"
+              src="./assets/images/branding/branding-sticker.svg"
               alt=""
-              class="branding-thumbnail"
+              class="sticker-bg-2"
             />
+            <div class="branding-thumbnail-container">
+              <img
+                src="./assets/images/branding/forme-thumbnail.png"
+                alt=""
+                class="branding-thumbnail"
+              />
+              <div class="branding-info">
+                <p class="sub-title">플렉시테리언 밀키트 브랜드 디자인</p>
+                <h1>For Me 로고 디자인</h1>
+                <div class="sub-title-bottom">
+                  <div class="skill">
+                    <!-- <img src="./assets/icons/aftereffect.svg" alt="" /> -->
+                    <img src="./assets/icons/illustration.svg" alt="" />
+                    <img src="./assets/icons/photoshop.svg" alt="" />
+                    <!-- <img src="./assets/icons/figma.svg" alt="" />
+                  <img src="./assets/icons/vscode.svg" alt="" />
+                  <img src="./assets/icons/chatgpt.svg" alt="" /> -->
+                  </div>
+                  <span class="part">개인프로젝트&nbsp;&nbsp;100%</span>
+                </div>
+                <div class="overview-container">
+                  <p class="overview">Overview</p>
+                  <p class="overview-text">
+                    ‘건강은 챙기고 싶지만 엄격한 채식주의는 거부감을 느끼는’
+                    사람들을 위한 플렉시테리언 밀키트 브랜드를
+                    만들어보고자하였습니다.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <img src="./assets/images/branding/vertex-thumbnail.svg" alt="" />
-        </div>
+        </a>
       </div>
     </section>
 

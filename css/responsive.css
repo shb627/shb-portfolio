@@ -1,7 +1,237 @@
 @media screen and (max-width: 425px) {
+  .btn {
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xs) var(--spacing-md);
+    border: none;
+    background-color: #fff;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    text-align: center;
+    /* 줄내림 되지마라*/
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .btn:hover {
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: none;
+    background-color: #fff;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    text-align: center;
+    /* 줄내림 되지마라*/
+    background-color: gold;
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
   .container {
     padding: 0 24px;
   }
+
+  .main {
+    position: relative;
+    width: 140%;
+    height: auto;
+    max-height: 1080px;
+    display: flex;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .main .main-bg {
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    object-fit: cover;
+  }
+  .main .black-sticker-1 {
+    width: 20%;
+    position: absolute;
+    top: -6%;
+    transform: rotate(330deg);
+    left: 1%;
+    rotate: 45%;
+    z-index: 5;
+  }
+  .main .black-sticker-2 {
+    width: 20%;
+    position: absolute;
+    top: -6%;
+    right: 25%;
+    z-index: 5;
+    transform: scaleX(-1) rotate(172deg);
+  }
+  .main-poster-wrap {
+    position: absolute;
+    width: 60%;
+    top: 0;
+    left: 6%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transform-origin: top center;
+    animation: posterFlap 5.5s ease-in-out infinite;
+
+    will-change: transform;
+  }
+
+  /* 프로필 반응형 */
+  .profile-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    gap: 20px;
+    top: 10%;
+    font-size: 14px;
+    left: 35%;
+    translate: calc(-50%);
+  }
+  .profile-content .profile-introduce {
+    width: 100%;
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile-content .profile-introduce h1 {
+    width: 100%;
+    height: auto;
+    font-size: 14px;
+    flex: 1;
+    text-align: center;
+
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+  }
+  /* 형광펜 */
+  .profile-content .profile-introduce h1::before {
+    content: "";
+    position: absolute;
+
+    left: 10%;
+    bottom: 8px;
+
+    width: 80%;
+    height: 60%;
+
+    background: rgba(168, 229, 0, 0.45);
+
+    border-radius: 4px;
+
+    z-index: -1;
+
+    transform: scaleX(0) rotate(-1deg);
+    transform-origin: left center;
+
+    transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  /* 스크롤 도달 시 */
+  .profile-content .profile-introduce h1.aos-animate::before {
+    transform: scaleX(1) rotate(-1deg);
+  }
+
+  .profile-introduce img {
+    width: 4%;
+    height: 4%;
+  }
+  .profile-content .profile-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 16px;
+    column-gap: 40px;
+    row-gap: 24px;
+
+    top: 0;
+  }
+
+  .profile-photo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .profile-photo img {
+    width: 30%;
+  }
+  .information {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .profile-title {
+    width: fit-content;
+    border-bottom: 4px solid #000;
+    margin-bottom: 28px;
+    font-size: 24px;
+    font-weight: 800;
+    width: 50%;
+    font-family: var(--font-en);
+    font-style: italic;
+  }
+  .profile-title a {
+    display: flex;
+  }
+  .awrad {
+    text-indent: 20px;
+  }
+  .edu-date {
+    padding-bottom: 8px;
+  }
+
+  .web-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8px;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 4%;
+    font-size: 16px;
+    color: #fff;
+  }
+
+  .web-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .web-bottom .skill {
+    width: 100%;
+    display: flex;
+  }
+  .web-card-bottom {
+    display: flex;
+    justify-content: center;
+  }
+  .web-card-bottom .web-card {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
   /* p {
     font-size: 12px;
   } */
@@ -72,16 +302,21 @@
     justify-content: center;
     flex-direction: column;
   }
+
+  .acha-info .skill {
+    display: flex;
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  .uxui-container {
+  .web-container {
     width: 100%;
     display: grid;
     gap: 40px;
     margin: 0 auto;
     justify-content: center;
-    padding: 120px 0;
+    padding: 16px 0;
     grid-template-columns: 1fr;
   }
 
@@ -127,13 +362,144 @@
     display: flex;
     gap: 8px;
   }
+  .web-card-bottom {
+    display: flex;
+    justify-content: center;
+    padding: 36px 0;
+  }
+  .web-card-bottom .web-card {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (max-width: 768px) {
   .uxui-card .uxui-thumbnail {
     width: 100%;
     min-height: 320px;
     overflow: hidden;
     border-radius: 12px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .profile-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    gap: 20px;
+    top: 18%;
+    font-size: 16px;
+    left: 50%;
+    translate: calc(-50%);
+  }
+  .profile-content .profile-introduce {
+    width: 100%;
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile-content .profile-introduce h1 {
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    flex: 1;
+    text-align: center;
+
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+  }
+  /* 형광펜 */
+  .profile-content .profile-introduce h1::before {
+    content: "";
+    position: absolute;
+
+    left: 10%;
+    bottom: 8px;
+
+    width: 80%;
+    height: 60%;
+
+    background: rgba(168, 229, 0, 0.45);
+
+    border-radius: 4px;
+
+    z-index: -1;
+
+    transform: scaleX(0) rotate(-1deg);
+    transform-origin: left center;
+
+    transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  /* 스크롤 도달 시 */
+  .profile-content .profile-introduce h1.aos-animate::before {
+    transform: scaleX(1) rotate(-1deg);
+  }
+
+  .profile-introduce img {
+    width: 4%;
+    height: 4%;
+  }
+  .profile-content .profile-text {
+    position: relative;
+    display: grid;
+    width: 100%;
+    height: auto;
+    gap: 16px;
+    column-gap: 24px;
+    row-gap: 24px;
+
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto;
+    top: 0;
+  }
+
+  .profile-photo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .profile-photo img {
+    width: 75%;
+  }
+  .information {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .profile-title {
+    width: fit-content;
+    border-bottom: 4px solid #000;
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: 800;
+    width: 50%;
+    font-family: var(--font-en);
+    font-style: italic;
+  }
+  .profile-title a {
+    display: flex;
+  }
+  .awrad {
+    text-indent: 20px;
+  }
+  .edu-date {
+    padding-bottom: 8px;
+  }
+  .information .skill {
+    width: 100%;
+    display: flex;
+  }
+  .information .skill img {
+    width: 10%;
   }
 }
