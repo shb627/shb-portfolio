@@ -149,15 +149,15 @@ section {
   }
 
   25% {
-    transform: perspective(1600px) rotateX(2deg);
+    transform: perspective(1600px) rotateX(1.5deg);
   }
 
   50% {
-    transform: perspective(1600px) rotateX(6deg);
+    transform: perspective(1600px) rotateX(3deg);
   }
 
   75% {
-    transform: perspective(1600px) rotateX(2deg);
+    transform: perspective(1600px) rotateX(1.5deg);
   }
 
   100% {
@@ -185,7 +185,7 @@ section {
   display: block;
 
   /* 오른쪽 상단 꼭짓점 고정 */
-  transform-origin: top left;
+  transform-origin: top right;
 
   transition:
     transform 0.5s cubic-bezier(0.59, 0.23, 0.15, 1.01),
@@ -204,6 +204,21 @@ section {
   z-index: 10;
   filter: drop-shadow(0 20px 18px rgba(0, 0, 0, 0.28));
 }
+.main-poster-sticker-wrap .web {
+  flex: 1;
+  width: 100%;
+  display: block;
+
+  /* 오른쪽 상단 꼭짓점 고정 */
+  transform-origin: top left;
+
+  transition:
+    transform 0.5s cubic-bezier(0.59, 0.23, 0.15, 1.01),
+    filter 0.4s ease;
+  cursor: grab;
+
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
+}
 .main-poster-sticker-wrap .uxui:hover {
   cursor: grabbing;
 
@@ -216,7 +231,7 @@ section {
   cursor: grabbing;
 
   /* 회전값은 그대로 유지 */
-  transform: rotate(10deg) translateX(3px) translateY(1px);
+  transform: rotate(10deg) rotateX(10deg) translateX(3px) translateY(1px);
   z-index: 10;
   filter: drop-shadow(0 20px 18px rgba(0, 0, 0, 0.28));
 }
