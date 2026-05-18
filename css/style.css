@@ -149,15 +149,15 @@ section {
   }
 
   25% {
-    transform: perspective(1600px) rotateX(0.25deg);
+    transform: perspective(1600px) rotateX(2deg);
   }
 
   50% {
-    transform: perspective(1600px) rotateX(-0.2deg);
+    transform: perspective(1600px) rotateX(6deg);
   }
 
   75% {
-    transform: perspective(1600px) rotateX(0.15deg);
+    transform: perspective(1600px) rotateX(2deg);
   }
 
   100% {
