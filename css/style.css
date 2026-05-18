@@ -598,11 +598,13 @@ section {
 
 .branding-container {
   position: relative;
+  display: flex;
+  flex-direction: column;
   max-width: 1280px;
   width: 100%;
   height: auto;
   margin: 0 auto;
-  gap: 10%;
+  gap: 50px;
   padding: 0 40px;
 }
 
@@ -641,6 +643,7 @@ section {
 .sticker-bg {
   width: 100%;
   display: block;
+  transform: scaleX(1) rotate(181deg);
 }
 
 /* 안쪽 썸네일 */
@@ -680,9 +683,14 @@ section {
   padding-bottom: 20px;
 }
 .sticker-bg-2 {
-  transform: scaleX(-1);
+  transform: scaleX(-1) rotate(183deg);
   width: 100%;
   display: block;
+}
+.branding-overview {
+  width: 30%;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 6%;
 }
 
 /* 모달연습 */
