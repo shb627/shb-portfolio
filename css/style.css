@@ -469,7 +469,7 @@ section {
   width: 80%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   flex: 2;
 }
 
@@ -489,15 +489,31 @@ section {
   align-items: flex-end;
   text-align: right;
 }
-.acha-reverse.overview-text {
+.overview-container {
+  border: 1px solid #333333;
+  color: #e8e8e8;
+  background-color: #000000;
+  padding: 20px 20px 30px;
+  margin-bottom: 40px;
+  border-radius: 16px;
   text-align: left;
 }
+.acha-reverse.overview-text {
+  text-align: left;
+  font-size: 14px;
+}
+
 .app-design .acha-left {
   width: 80%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   flex: 2;
+}
+
+.app-design .acha-left img {
+  width: 80%;
+  height: auto;
 }
 
 .acha-info {
@@ -518,28 +534,33 @@ section {
 .sub-title-bottom .part {
   display: flex;
   justify-content: flex-end;
+  flex: 1;
 }
 
 .sub-title-bottom .skill {
+  width: 100%;
   display: flex;
   gap: 8px;
+  flex: 1;
+
   align-items: center;
 }
 
-.overview-container {
-  border: 1px solid #7f7f7f;
+.acha-overview-container {
+  border: 1px solid #333333;
   color: #e8e8e8;
   background-color: #000000;
   padding: 20px 20px 30px;
   margin-bottom: 40px;
   border-radius: 16px;
+  text-align: left;
 }
 .acha-info .overview {
   padding-bottom: 12px;
 }
 .acha-info h1 {
   padding-bottom: 40px;
-  font-size: 64px;
+  font-size: 48px;
 }
 
 .acha-info .acha-skill {
@@ -573,6 +594,38 @@ section {
   display: flex;
 }
 .acha-info .overview-text {
+}
+.acha-info {
+  display: flex;
+  flex-direction: column;
+}
+.acha-info .sub-title {
+  font-size: 14px;
+  font-weight: 200;
+  flex: 1;
+}
+
+.acha-title-bottom {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* 원하는 간격 */
+  padding-bottom: 20px;
+}
+
+.acha-title-bottom .part {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.acha-title-bottom .skill {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  flex: 1;
+  justify-content: flex-end;
+
+  align-items: center;
 }
 
 /* 카드뉴스 */

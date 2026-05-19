@@ -334,12 +334,7 @@
     overflow: hidden;
     border-radius: 12px;
   }
-  .uxui-card .uxui-thumbnail {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    border-radius: 12px;
-  }
+
   .uxui-card .uxui-thumbnail img {
     width: 100%;
     object-fit: cover;
@@ -375,14 +370,6 @@
   }
 }
 
-@media screen and (max-width: 768px) {
-  .uxui-card .uxui-thumbnail {
-    width: 100%;
-    min-height: 320px;
-    overflow: hidden;
-    border-radius: 12px;
-  }
-}
 @media screen and (max-width: 1024px) {
   .profile-content {
     position: absolute;
@@ -501,6 +488,15 @@
   }
   .information .skill img {
     width: 10%;
+  }
+
+  /* uxui */
+  .app-design .acha-left {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 2;
   }
 
   /* 브랜딩 */
